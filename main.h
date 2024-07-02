@@ -11,4 +11,7 @@ needed for main.cpp.
 #include <iostream>     /* cout, endl */
 #include <stdlib.h>     /* srand, rand */
 
+using std::cout;
+using std::endl;
+
 #endif //MAIN_H
