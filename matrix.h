@@ -12,9 +12,9 @@ This file is included by matrix.cpp for the implementation of the MyList class m
 #include <stdlib.h>     /* srand, rand */
 #include <vector>       /* vector */
 
-
 #define ROWS 2
 #define COLS 2
+#define INITVALUE 0
 
 class Matrix {
     /*********************************************
@@ -32,7 +32,7 @@ public:
     /**********************
     Constructors/Destructor
     ***********************/
-    Matrix(int);
+    Matrix(int, int, int);
     ~Matrix();
 
     /**********************
