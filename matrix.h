@@ -12,6 +12,7 @@ This file is included by matrix.cpp for the implementation of the MyList class m
 #include <stdlib.h>     /* srand, rand */
 #include <vector>       /* vector */
 
+
 #define ROWS 2
 #define COLS 2
 
@@ -49,7 +50,7 @@ private:
     Attributes
     ***********************/
 
-    
+
     /**********************
     Private Methods
     ***********************/
