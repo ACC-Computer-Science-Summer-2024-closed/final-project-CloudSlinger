@@ -11,6 +11,8 @@ needed for main.cpp.
 #include <iostream>     /* cout, endl */
 #include <stdlib.h>     /* srand, rand */
 
+#include "matrix.h"
+
 using std::cout;
 using std::endl;
 
