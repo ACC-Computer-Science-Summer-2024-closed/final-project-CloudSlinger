@@ -69,3 +69,23 @@ Matrix::Matrix(int rows, int cols, int initValue) {
 }
 
 
+Matrix::~Matrix() {
+
+    /*********************************************
+    This destructor cleans up resources allocated to Matrix objects.
+
+    @param na : na
+
+    @return na : na
+
+    @exception na : na
+    *********************************************/
+
+    for (int i = 0; i < rows; ++i) {
+        delete[] data[i];
+    }
+    delete[] data;
+
+}
+
+
