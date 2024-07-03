@@ -10,7 +10,6 @@ This file is included by matrix.cpp for the implementation of the MyList class m
 
 #include <iostream>     /* cout, endl */
 #include <stdlib.h>     /* srand, rand */
-#include <vector>       /* vector */
 
 #define ROWS 2
 #define COLS 2
@@ -32,6 +31,7 @@ public:
     /**********************
     Constructors/Destructor
     ***********************/
+    Matrix(int, int);
     Matrix(int, int, int);
     ~Matrix();
 
@@ -49,6 +49,8 @@ private:
     /**********************
     Attributes
     ***********************/
+    int rows;
+    int cols;
 
 
     /**********************
@@ -56,6 +58,5 @@ private:
     ***********************/
 
 };
-
 
 #endif //MATRIX_H
