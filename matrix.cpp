@@ -18,7 +18,7 @@ Matrix::Matrix(int rows, int cols) {
     @param cols : the number of columns in the matrix
     *********************************************/
     if (rows <= ROWS || cols <= COLS) {
-        throw std::invalid_argument("Matrix dimensions must be at least 2x2.");
+        throw 0;
     }
     this->rows = rows;
     this->cols = cols;
@@ -49,7 +49,7 @@ Matrix::Matrix(int rows, int cols, int initValue) {
     @param initValue : the initial value for all elements
     *********************************************/
     if (rows <= ROWS || cols <= COLS) {
-        throw std::invalid_argument("Matrix dimensions must be at least 2x2.");
+        throw 0;
     }
     this->rows = rows;
     this->cols = cols;
@@ -88,4 +88,12 @@ Matrix::~Matrix() {
 
 }
 
+void Matrix::printMatrix() const {
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            std::cout << data[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+}
 
