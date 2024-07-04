@@ -167,6 +167,12 @@ int Matrix::rowSum(int row) {
     }
 }
 
+double Matrix::rowAverage(int row)  {
+    return static_cast<double>(rowSum(row)) / cols;
+}
+
+
+
 void Matrix::setElement(int row, int col, int value) {
     /*********************************************
     This method sets the value of a specific element in the matrix.
