@@ -21,7 +21,7 @@ Matrix::Matrix(int rows, int cols) {
     }
     this->rows = rows;
     this->cols = cols;
-    this->sorted = false;
+    sorted = false;
 
     data = new int*[rows];
 
@@ -52,7 +52,7 @@ Matrix::Matrix(int rows, int cols, int initValue) {
     }
     this->rows = rows;
     this->cols = cols;
-    this->sorted = false;
+    sorted = false;
 
     data = new int*[rows];
 
@@ -232,10 +232,25 @@ void Matrix::setElement(int row, int col, int value) {
 
     @exception int : throws an integer exception if the row index is out of bounds
     *********************************************/
-    
+
     if (row >= 0 && row < rows && col >= 0 && col < cols) {
         data[row][col] = value;
+        sorted = false;
     } else {
         throw 0;
     }
 }
+
+
+bool Matrix::getSorted() {
+
+    /*********************************************
+    This getter method returns the sorted status of the array.
+
+    @return bool : true if the array is sorted, otherwise false
+
+    @exception na : na
+    *********************************************/
+    return sorted;
+}
+
