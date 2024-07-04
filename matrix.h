@@ -1,8 +1,8 @@
 /**************************
 Name: Tom Tang
 Assignment: Final Project
-Purpose of the file: This is a header file that contains the class declaration for MyList.
-This file is included by matrix.cpp for the implementation of the MyList class methods.
+Purpose of the file: This is a header file that contains the class declaration for Matrix.
+This file is included by matrix.cpp for the implementation of the Matrix class methods.
 ***************************/
 
 #ifndef MATRIX_H
@@ -14,6 +14,9 @@ This file is included by matrix.cpp for the implementation of the MyList class m
 #define ROWS 2
 #define COLS 2
 #define INITVALUE 0
+
+using std::cout;
+using std::endl;
 
 class Matrix {
     /*********************************************
@@ -38,12 +41,14 @@ public:
     /**********************
     Getters/Accessors
     ***********************/
-
+    void printMatrix();
+    void printRow(int);
+    void printColumn(int);
 
     /**********************
     Setters/Mutators
     ***********************/
-
+    void setElement(int, int, int);
 
 private:
     /**********************
@@ -51,12 +56,14 @@ private:
     ***********************/
     int rows;
     int cols;
-
+    int **data;
+    bool sorted;
 
     /**********************
     Private Methods
     ***********************/
-
+    void initializeData(int);
+    bool isSorted() const;
 };
 
 #endif //MATRIX_H
