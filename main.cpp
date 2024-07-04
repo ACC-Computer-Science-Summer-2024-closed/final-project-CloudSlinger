@@ -90,7 +90,46 @@ int main() {
         cout << "Max: " << matrix.max() << endl;
         cout << endl;
 
-  
+        int newValue = 10;
+        int newRowIndex = 1;
+        int newColIndex = 1;
+        matrix.setElement(newRowIndex, newColIndex, newValue);
+        cout << "Setting element at index (" << newRowIndex << ", " << newColIndex << ") to " << newValue << ":" << endl;
+        matrix.printMatrix();
+        cout  << endl;
+        cout << "Row index " << rowIndex << ":" << endl;
+        matrix.printRow(rowIndex);
+        cout << "Sum: " << matrix.rowSum(rowIndex) << endl;
+        cout << "Average: " << matrix.rowAverage(rowIndex) << endl;
+        cout << "Min: " << matrix.min() << endl;
+        cout << "Max: " << matrix.max() << endl;
+        cout << endl;
+
+        newValue = 17;
+        newRowIndex = 2;
+        newColIndex = 1;
+        rowIndex = 2;
+        matrix.setElement(newRowIndex, newColIndex, newValue);
+        cout << "Setting element at index (" << newRowIndex << ", " << newColIndex << ") to " << newValue << ":" << endl;
+        matrix.printMatrix();
+        cout  << endl;
+        cout << "Row index " << rowIndex << ":" << endl;
+        matrix.printRow(rowIndex);
+        cout << "Sum: " << matrix.rowSum(rowIndex) << endl;
+        cout << "Average: " << matrix.rowAverage(rowIndex) << endl;
+        cout << "Min: " << matrix.min() << endl;
+        cout << "Max: " << matrix.max() << endl;
+        cout << endl;
+
+
+
+
+
+
+        int colIndex = 1;
+        cout << "Column index " << colIndex << ":" << endl;
+        matrix.printColumn(colIndex);
+        cout << endl;
 
     } catch (int e) {
         cout << "Matrix row/columns must be larger than 2." << endl;
