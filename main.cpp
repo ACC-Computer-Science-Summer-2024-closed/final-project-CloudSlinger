@@ -10,40 +10,90 @@ a function to print a message to the console.
 
 int main() {
 
-    cout << "Attempting to set Matrix: matrix(3, 3, 5)" << endl;
+    cout << "Attempting to create and initialize matrix(2, 2)" << endl;
     try {
+        Matrix matrix(2, 2);
+    } catch (int e) {
+        cout << "Matrix row/columns must be larger than 2." << endl;
+        cout << endl;
+    }
 
+    cout << "Attempting to create and initialize matrix(3, 2)" << endl;
+    try {
+        Matrix matrix(3, 2);
+    } catch (int e) {
+        cout << "Matrix row/columns must be larger than 2." << endl;
+        cout << endl;
+    }
+
+    cout << "Attempting to create and initialize matrix(2, 3)" << endl;
+    try {
+        Matrix matrix(2, 3);
+    } catch (int e) {
+        cout << "Matrix row/columns must be larger than 2." << endl;
+        cout << endl;
+    }
+
+    cout << "Attempting to create and initialize matrix(3, 3)" << endl;
+    try {
+        Matrix matrix(3, 3);
+        matrix.printMatrix();
+        cout << endl;
+    } catch (int e) {
+        cout << "Matrix row/columns must be larger than 2." << endl;
+        cout << endl;
+    }
+
+    cout << "Attempting to create and initialize matrix(2, 2, 0)" << endl;
+    try {
+        Matrix matrix(2, 2, 0);
+    } catch (int e) {
+        cout << "Matrix row/columns must be larger than 2." << endl;
+        cout << endl;
+    }
+
+    cout << "Attempting to create and initialize matrix(3, 2, 0)" << endl;
+    try {
+        Matrix matrix(3, 2, 0);
+    } catch (int e) {
+        cout << "Matrix row/columns must be larger than 2." << endl;
+        cout << endl;
+    }
+
+    cout << "Attempting to create and initialize matrix(2, 3, 0)" << endl;
+    try {
+        Matrix matrix(2, 3, 0);
+    } catch (int e) {
+        cout << "Matrix row/columns must be larger than 2." << endl;
+        cout << endl;
+    }
+
+    cout << "Attempting to create and initialize matrix(3, 3, 0)" << endl;
+    try {
+        Matrix matrix(3, 3, 0);
+        matrix.printMatrix();
+        cout << endl;
+    } catch (int e) {
+        cout << "Matrix row/columns must be larger than 2." << endl;
+        cout << endl;
+    }
+
+    cout << "Attempting to create and initialize matrix(3, 3, 5)" << endl;
+    try {
         Matrix matrix(3, 3, 5);
-
-        cout << "Matrix:" << endl;
         matrix.printMatrix();
-
+        cout << endl;
         int rowIndex = 1;
-        cout << "Sum of Row index " << rowIndex << ": " << matrix.rowSum(rowIndex) << endl;
-        cout << "Average of Row index " << rowIndex << ": " << matrix.rowAverage(rowIndex) << endl;
+        cout << "Sum row index " << rowIndex << ": " << matrix.rowSum(rowIndex) << endl;
+        cout << "Average row index " << rowIndex << ": " << matrix.rowAverage(rowIndex) << endl;
+        cout << "Min: " << matrix.min() << endl;
+        cout << "Max: " << matrix.max() << endl;
+        cout << endl;
 
-        cout << "\n" << endl;
-
-        cout << "Row index " << rowIndex << ":" << endl;
-        matrix.printRow(rowIndex);
-        cout << "\n" << endl;
-
-        int colIndex = 0;
-        cout << "Column index " << colIndex << ":" << endl;
-        matrix.printColumn(colIndex);
-        cout << "\n" << endl;
-
-        int newValue = 10;
-        int setRowIndex = 1;
-        int setColIndex = 1;
-        matrix.setElement(setRowIndex, setColIndex, newValue);
-        cout << "Matrix after setting element at (" << setRowIndex << ", " << setColIndex << ") to " << newValue << ":" << endl;
-        matrix.printMatrix();
-        cout << "\n" << endl;
-
+  
 
     } catch (int e) {
-        cout << "Row/columns must be larger than 2." << endl;
+        cout << "Matrix row/columns must be larger than 2." << endl;
     }
 
 
