@@ -44,6 +44,7 @@ public:
     void printMatrix();
     void printRow(int);
     void printColumn(int);
+    int rowSum(int);
 
     /**********************
     Setters/Mutators
