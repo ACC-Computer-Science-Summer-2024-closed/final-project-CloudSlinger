@@ -144,3 +144,44 @@ void Matrix::printColumn(int col){
         throw 0;
     }
 }
+
+int Matrix::rowSum(int row) {
+
+    /*********************************************
+    This method calculates the sum of elements in a specific row of the matrix.
+
+    @param row : the row index for which the sum is calculated
+    @return int : the sum of elements in the specified row
+
+    @exception int : throws an integer exception if the row index is out of bounds
+    *********************************************/
+
+    if (row >= 0 && row < rows) {
+        int sum = 0;
+        for (int j = 0; j < cols; ++j) {
+            sum += data[row][j];
+        }
+        return sum;
+    } else {
+        throw 0;
+    }
+}
+
+void Matrix::setElement(int row, int col, int value) {
+    /*********************************************
+    This method sets the value of a specific element in the matrix.
+
+    @param row : the row index of the element to set
+    @param col : the column index of the element to set
+    @param value : the value to set at the specified element
+
+    @return void : does not return a value
+
+    @exception int : throws an integer exception if the row index is out of bounds
+    *********************************************/
+    if (row >= 0 && row < rows && col >= 0 && col < cols) {
+        data[row][col] = value;
+    } else {
+        throw 0;
+    }
+}
