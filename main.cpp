@@ -12,30 +12,35 @@ int main() {
 
     cout << "Attempting to set Matrix: matrix(3, 3, 5)" << endl;
     try {
+
         Matrix matrix(3, 3, 5);
 
         cout << "Matrix:" << endl;
         matrix.printMatrix();
 
-        cout << "Attempting to set Row: index 2" << endl;
-        try {
-            int rowIndex = 2;
-            cout << "Row:" << endl;
-            matrix.printRow(rowIndex);
+        int rowIndex = 1;
+        cout << "Sum of Row index " << rowIndex << ": " << matrix.rowSum(rowIndex) << endl;
+        cout << "Average of Row index " << rowIndex << ": " << matrix.rowAverage(rowIndex) << endl;
 
-        } catch (int e) {
-            cout << "Invalid row index." << endl;
-        }
+        cout << "\n" << endl;
 
-        cout << "Attempting to set Column: index 1" << endl;
-        try {
-            int colIndex = 1;
-            cout << "Column:" << endl;
-            matrix.printColumn(colIndex);
+        cout << "Row index " << rowIndex << ":" << endl;
+        matrix.printRow(rowIndex);
+        cout << "\n" << endl;
 
-        } catch (int e) {
-            cout << "Invalid column index." << endl;
-        }
+        int colIndex = 0;
+        cout << "Column index " << colIndex << ":" << endl;
+        matrix.printColumn(colIndex);
+        cout << "\n" << endl;
+
+        int newValue = 10;
+        int setRowIndex = 1;
+        int setColIndex = 1;
+        matrix.setElement(setRowIndex, setColIndex, newValue);
+        cout << "Matrix after setting element at (" << setRowIndex << ", " << setColIndex << ") to " << newValue << ":" << endl;
+        matrix.printMatrix();
+        cout << "\n" << endl;
+
 
     } catch (int e) {
         cout << "Row/columns must be larger than 2." << endl;
