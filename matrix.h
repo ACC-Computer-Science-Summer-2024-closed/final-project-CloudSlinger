@@ -49,7 +49,7 @@ public:
     int min();
     int max();
     bool getSorted();
-    void sort();
+
 
     /**********************
     Setters/Mutators
