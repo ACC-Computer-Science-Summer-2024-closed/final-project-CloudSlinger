@@ -10,6 +10,38 @@ a function to print a message to the console.
 
 int main() {
 
+    cout << "Attempting to create and initialize matrix(2, 0)..." << endl;
+    try {
+        Matrix matrix(2, 0);
+    } catch (int e) {
+        cout << "Error: Matrix row/columns must be larger than 2." << endl;
+        cout << endl;
+    }
+
+    cout << "Attempting to create and initialize matrix(0, 2)..." << endl;
+    try {
+        Matrix matrix(0, 2);
+    } catch (int e) {
+        cout << "Error: Matrix row/columns must be larger than 2." << endl;
+        cout << endl;
+    }
+
+    cout << "Attempting to create and initialize matrix(3, -1)..." << endl;
+    try {
+        Matrix matrix(3, -1);
+    } catch (int e) {
+        cout << "Error: Matrix row/columns must be larger than 2." << endl;
+        cout << endl;
+    }
+
+    cout << "Attempting to create and initialize matrix(-1, 3)..." << endl;
+    try {
+        Matrix matrix(-1, 3);
+    } catch (int e) {
+        cout << "Error: Matrix row/columns must be larger than 2." << endl;
+        cout << endl;
+    }
+
     cout << "Attempting to create and initialize matrix(2, 2)..." << endl;
     try {
         Matrix matrix(2, 2);
@@ -53,6 +85,22 @@ int main() {
         cout << endl;
     }
 
+    cout << "Attempting to create and initialize matrix(3, -1, 0)..." << endl;
+    try {
+        Matrix matrix(3, -1, 0);
+    } catch (int e) {
+        cout << "Error: Matrix row/columns must be larger than 2." << endl;
+        cout << endl;
+    }
+
+    cout << "Attempting to create and initialize matrix(-1, 3, 0)..." << endl;
+    try {
+        Matrix matrix(-1, 3, 0);
+    } catch (int e) {
+        cout << "Error: Matrix row/columns must be larger than 2." << endl;
+        cout << endl;
+    }
+
     cout << "Attempting to create and initialize matrix(3, 2, 0)..." << endl;
     try {
         Matrix matrix(3, 2, 0);
@@ -64,6 +112,17 @@ int main() {
     cout << "Attempting to create and initialize matrix(2, 3, 0)..." << endl;
     try {
         Matrix matrix(2, 3, 0);
+    } catch (int e) {
+        cout << "Error: Matrix row/columns must be larger than 2." << endl;
+        cout << endl;
+    }
+
+    cout << "Attempting to create and initialize matrix(3, 3, -1)..." << endl;
+    try {
+        Matrix matrix(3, 3, -1);
+        cout << "Matrix initialized successfully." << endl;
+        matrix.printMatrix();
+        cout << endl;
     } catch (int e) {
         cout << "Error: Matrix row/columns must be larger than 2." << endl;
         cout << endl;
@@ -126,7 +185,7 @@ int main() {
         cout << "Max: " << matrix.max() << endl;
         cout << endl;
 
-        newValue = 19;
+        newValue = -3;
         newRowIndex = 0;
         newColIndex = 0;
         matrix.setElement(newRowIndex, newColIndex, newValue);
