@@ -241,6 +241,41 @@ void Matrix::setElement(int row, int col, int value) {
     }
 }
 
+void Matrix::rotateMatrix() {
+
+    /*********************************************
+    This method rotates the matrix by swapping its rows and columns.
+    It sets the sorted status as false.
+
+    @return void
+
+    @exception na : na
+    *********************************************/
+
+    int **newArray = new int*[cols];
+    for (int i = 0; i < cols; ++i) {
+        newArray[i] = new int[rows];
+    }
+
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            newArray[j][i] = data[i][j];
+        }
+    }
+
+    for (int i = 0; i < rows; ++i) {
+        delete[] data[i];
+    }
+    delete[] data;
+
+    int temp = rows;
+    rows = cols;
+    cols = temp;
+
+    data = newArray;
+
+    sorted = false;
+}
 
 bool Matrix::getSorted() {
 
