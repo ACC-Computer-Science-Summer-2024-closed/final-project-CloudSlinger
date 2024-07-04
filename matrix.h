@@ -48,11 +48,14 @@ public:
     double rowAverage(int);
     int min();
     int max();
+    bool getSorted();
+    void sort();
 
     /**********************
     Setters/Mutators
     ***********************/
     void setElement(int, int, int);
+    void rotateMatrix();
 
 private:
     /**********************
@@ -67,7 +70,6 @@ private:
     Private Methods
     ***********************/
     void initializeData(int);
-    bool isSorted() const;
 };
 
 #endif //MATRIX_H
