@@ -151,6 +151,7 @@ int Matrix::rowSum(int row) {
     This method calculates the sum of elements in a specific row of the matrix.
 
     @param row : the row index for which the sum is calculated
+
     @return int : the sum of elements in the specified row
 
     @exception int : throws an integer exception if the row index is out of bounds
@@ -168,12 +169,58 @@ int Matrix::rowSum(int row) {
 }
 
 double Matrix::rowAverage(int row)  {
+
+    /*********************************************
+    This method calculates the average of elements in a specific row of the matrix.
+
+    @param row : the row index for which the average is calculated
+
+    @return double : the average of elements in the specified row
+    *********************************************/
+
     return static_cast<double>(rowSum(row)) / cols;
 }
 
+int Matrix::min() {
 
+    /*********************************************
+    This method finds the minimum value in the entire matrix.
+
+    @return int : the minimum value found in the matrix
+    *********************************************/
+
+    int minValue = data[0][0];
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            if (data[i][j] < minValue) {
+                minValue = data[i][j];
+            }
+        }
+    }
+    return minValue;
+}
+
+int Matrix::max() {
+
+    /*********************************************
+    This method finds the maximum value in the entire matrix.
+
+    @return int : the maximum value found in the matrix
+    *********************************************/
+
+    int maxValue = data[0][0];
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            if (data[i][j] > maxValue) {
+                maxValue = data[i][j];
+            }
+        }
+    }
+    return maxValue;
+}
 
 void Matrix::setElement(int row, int col, int value) {
+
     /*********************************************
     This method sets the value of a specific element in the matrix.
 
@@ -185,6 +232,7 @@ void Matrix::setElement(int row, int col, int value) {
 
     @exception int : throws an integer exception if the row index is out of bounds
     *********************************************/
+    
     if (row >= 0 && row < rows && col >= 0 && col < cols) {
         data[row][col] = value;
     } else {
