@@ -68,7 +68,7 @@ Matrix::Matrix(int rows, int cols, int initValue) {
 }
 
 
-Matrix::~Matrix() {
+Matrix::~Matrix(){
 
     /*********************************************
     This destructor cleans up resources allocated to Matrix objects.
@@ -87,7 +87,7 @@ Matrix::~Matrix() {
 
 }
 
-void Matrix::printMatrix() const {
+void Matrix::printMatrix(){
 
     /*********************************************
     This method outputs the 2D array to the console.
@@ -105,7 +105,7 @@ void Matrix::printMatrix() const {
     }
 }
 
-void Matrix::printRow(int row) const {
+void Matrix::printRow(int row){
 
     /*********************************************
     This method outputs a specific row of the 2D array to the console.
@@ -125,7 +125,7 @@ void Matrix::printRow(int row) const {
     }
 }
 
-void Matrix::printColumn(int col) const {
+void Matrix::printColumn(int col){
 
     /*********************************************
     This method outputs a specific column of the 2D array to the console.
