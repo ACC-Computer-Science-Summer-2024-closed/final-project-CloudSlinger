@@ -6,7 +6,6 @@ Purpose of the file: This file implements the functions declared in matrix.h.
 
 #include "matrix.h"
 
-
 Matrix::Matrix(int rows, int cols) {
 
     /*********************************************
@@ -89,11 +88,59 @@ Matrix::~Matrix() {
 }
 
 void Matrix::printMatrix() const {
+
+    /*********************************************
+    This method outputs the 2D array to the console.
+
+    @return void : does not return a value
+
+    @exception na : na
+    *********************************************/
+
     for (int i = 0; i < rows; ++i) {
         for (int j = 0; j < cols; ++j) {
-            std::cout << data[i][j] << " ";
+            cout << data[i][j] << " ";
         }
-        std::cout << std::endl;
+        cout << endl;
     }
 }
 
+void Matrix::printRow(int row) const {
+
+    /*********************************************
+    This method outputs a specific row of the 2D array to the console.
+
+    @return void : does not return a value
+
+    @exception int : throws an integer exception if the row index is invalid
+    *********************************************/
+
+    if (row >= 0 && row < rows) {
+        for (int j = 0; j < cols; ++j) {
+            cout << data[row][j] << " ";
+        }
+        cout << endl;
+    } else {
+        throw 0;
+    }
+}
+
+void Matrix::printColumn(int col) const {
+
+    /*********************************************
+    This method outputs a specific column of the 2D array to the console.
+
+    @return void : does not return a value
+
+    @exception int : throws an integer exception if the column index is invalid
+    *********************************************/
+
+    if (col >= 0 && col < cols) {
+        for (int i = 0; i < rows; ++i) {
+            cout << data[i][col] << " ";
+        }
+       cout << endl;
+    } else {
+        throw 0;
+    }
+}
