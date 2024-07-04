@@ -45,6 +45,8 @@ public:
     void printRow(int);
     void printColumn(int);
     int rowSum(int);
+    double rowAverage(int);
+
 
     /**********************
     Setters/Mutators
