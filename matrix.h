@@ -56,6 +56,7 @@ public:
     void setElement(int, int, int);
     void sortMatrix();
     void rotateMatrix();
+    void setMatrix(int, int, int initValue = 0);
 
 private:
     /**********************
@@ -65,11 +66,6 @@ private:
     int cols;
     int **data;
     bool sorted;
-
-    /**********************
-    Private Methods
-    ***********************/
-    void setMatrix(int, int, int initValue = 0);
 
 };
 
