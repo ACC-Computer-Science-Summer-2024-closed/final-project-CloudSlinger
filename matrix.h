@@ -10,6 +10,7 @@ This file is included by matrix.cpp for the implementation of the Matrix class m
 
 #include <iostream>     /* cout, endl */
 #include <stdlib.h>     /* srand, rand */
+#include <algorithm>    /* binary_search */
 
 #define ROWS 2
 #define COLS 2
@@ -49,8 +50,7 @@ public:
     int min();
     int max();
     bool getSorted();
-    void setMatrix(int, int, int);
-
+    bool findValue(int);
 
     /**********************
     Setters/Mutators
@@ -70,7 +70,8 @@ private:
     /**********************
     Private Methods
     ***********************/
-    void initializeData(int);
+    void setMatrix(int, int, int);
+
 };
 
 #endif //MATRIX_H
