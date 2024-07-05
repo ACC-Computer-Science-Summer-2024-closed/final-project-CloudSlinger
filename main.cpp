@@ -258,6 +258,7 @@ int main() {
         cout << endl;
 
         rowIndex = 0;
+        cout << "Updated Matrix with new elements." << endl;
         matrix.printMatrix();
         cout << "Sorted: ";
         if (matrix.getSorted()) {
@@ -265,7 +266,6 @@ int main() {
         } else {
             cout << "false";
         }
-
         cout << "\n" << endl;
 
         int colIndex = 0;
@@ -465,7 +465,7 @@ int main() {
         newColIndex = 2;
         matrix.setElement(newRowIndex, newColIndex, newValue);
         cout << "Setting element at index (" << newRowIndex << ", " << newColIndex << ") to " << newValue << "." << endl;
-        
+
         newValue = 0;
         newRowIndex = 3;
         newColIndex = 7;
