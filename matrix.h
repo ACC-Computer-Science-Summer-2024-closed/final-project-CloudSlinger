@@ -48,15 +48,15 @@ public:
     double rowAverage(int);
     int min();
     int max();
-    bool getSorted();
     bool findValue(int);
+    bool getSorted();
 
     /**********************
     Setters/Mutators
     ***********************/
     void setElement(int, int, int);
-    void rotateMatrix();
     void sortMatrix();
+    void rotateMatrix();
 
 private:
     /**********************

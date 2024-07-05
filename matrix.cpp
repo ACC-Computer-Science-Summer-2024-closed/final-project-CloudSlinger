@@ -166,6 +166,22 @@ double Matrix::rowAverage(int row)  {
     return static_cast<double>(rowSum(row)) / cols;
 }
 
+void Matrix::sortMatrix() {
+
+    /*********************************************
+    This method sorts each row of the matrix.
+
+    @return void : does not return a value
+
+    @exception na : na
+    *********************************************/
+    for (int i = 0; i < rows; ++i) {
+        std::sort(data[i], data[i] + cols);
+    }
+
+    sorted = true;
+}
+
 int Matrix::min() {
 
     /*********************************************
@@ -208,28 +224,6 @@ int Matrix::max() {
     return maxValue;
 }
 
-void Matrix::setElement(int row, int col, int value) {
-
-    /*********************************************
-    This method sets the value of a specific element in the matrix.
-
-    @param row : the row index of the element to set
-    @param col : the column index of the element to set
-    @param value : the value to set at the specified element
-
-    @return void : does not return a value
-
-    @exception int : throws an integer exception if the row index is out of bounds
-    *********************************************/
-
-    if (row >= 0 && row < rows && col >= 0 && col < cols) {
-        data[row][col] = value;
-        sorted = false;
-    } else {
-        throw 0;
-    }
-}
-
 void Matrix::rotateMatrix() {
 
     /*********************************************
@@ -266,17 +260,58 @@ void Matrix::rotateMatrix() {
     sorted = false;
 }
 
-bool Matrix::getSorted() {
+bool Matrix::findValue(int value)  {
 
     /*********************************************
-    This getter method returns the sorted status of the array.
+    This method searches for a given value in the Matrix.
+    If the Matrix is sorted, it uses binary search, else it performs a linear search.
 
-    @return bool : true if the array is sorted, otherwise false
+    @param value : the value to search for in the Matrix
+
+    @return bool : true if the value is found, otherwise false
 
     @exception na : na
     *********************************************/
 
-    return sorted;
+    bool valueFound = false;
+
+    for (int i = 0; i < rows; ++i) {
+        if (sorted) {
+            if (std::binary_search(data[i], data[i] + cols, value)) {
+                valueFound = true;
+            }
+        } else {
+            for (int j = 0; j < cols; ++j) {
+                if (data[i][j] == value) {
+                    valueFound = true;
+                }
+            }
+        }
+    }
+
+    return valueFound;
+}
+
+void Matrix::setElement(int row, int col, int value) {
+
+    /*********************************************
+    This method sets the value of a specific element in the matrix.
+
+    @param row : the row index of the element to set
+    @param col : the column index of the element to set
+    @param value : the value to set at the specified element
+
+    @return void : does not return a value
+
+    @exception int : throws an integer exception if the row index is out of bounds
+    *********************************************/
+
+    if (row >= 0 && row < rows && col >= 0 && col < cols) {
+        data[row][col] = value;
+        sorted = false;
+    } else {
+        throw 0;
+    }
 }
 
 void Matrix::setMatrix(int rows, int cols, int initValue) {
@@ -312,49 +347,15 @@ void Matrix::setMatrix(int rows, int cols, int initValue) {
     sorted = true;
 }
 
-bool Matrix::findValue(int value)  {
+bool Matrix::getSorted() {
 
     /*********************************************
-    This method searches for a given value in the Matrix.
-    If the Matrix is sorted, it uses binary search, else it performs a linear search.
+    This getter method returns the sorted status of the array.
 
-    @param value : the value to search for in the Matrix
-
-    @return bool : true if the value is found, otherwise false
+    @return bool : true if the array is sorted, otherwise false
 
     @exception na : na
     *********************************************/
 
-    bool valueFound = false;
-
-    for (int i = 0; i < rows; ++i) {
-        if (sorted) {
-            if (std::binary_search(data[i], data[i] + cols, value)) {
-                valueFound = true;
-            }
-        } else {
-            for (int j = 0; j < cols; ++j) {
-                if (data[i][j] == value) {
-                    valueFound = true;
-                }
-            }
-        }
-    }
-
-    return valueFound;
-}
-
-void Matrix::sortMatrix() {
-    /*********************************************
-    This method sorts each row of the matrix.
-
-    @return void : does not return a value
-
-    @exception na : na
-    *********************************************/
-    for (int i = 0; i < rows; ++i) {
-        std::sort(data[i], data[i] + cols);
-    }
-
-    sorted = true;
+    return sorted;
 }
