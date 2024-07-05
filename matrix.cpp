@@ -18,7 +18,7 @@ Matrix::Matrix(int rows, int cols) {
 
     @return na : na
 
-    @exception na : na
+    @exception int : thrown if rows or columns <= 2
     *********************************************/
 
     if (rows <= ROWS || cols <= COLS) {
@@ -41,7 +41,7 @@ Matrix::Matrix(int rows, int cols, int initValue) {
 
     @return na : na
 
-    @exception na : na
+    @exception int : thrown if rows or columns <= 2
     *********************************************/
 
     if (rows <= ROWS || cols <= COLS) {
