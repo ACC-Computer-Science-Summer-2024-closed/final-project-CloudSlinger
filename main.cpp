@@ -460,12 +460,17 @@ int main() {
         matrix.setElement(newRowIndex, newColIndex, newValue);
         cout << "Setting element at index (" << newRowIndex << ", " << newColIndex << ") to " << newValue << "." << endl;
 
+        newValue = -25;
+        newRowIndex = 3;
+        newColIndex = 2;
+        matrix.setElement(newRowIndex, newColIndex, newValue);
+        cout << "Setting element at index (" << newRowIndex << ", " << newColIndex << ") to " << newValue << "." << endl;
+        
         newValue = 0;
         newRowIndex = 3;
         newColIndex = 7;
         matrix.setElement(newRowIndex, newColIndex, newValue);
         cout << "Setting element at index (" << newRowIndex << ", " << newColIndex << ") to " << newValue << "." << endl;
-
 
         newValue = 19;
         newRowIndex = 3;
