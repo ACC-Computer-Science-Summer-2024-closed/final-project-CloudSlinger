@@ -373,9 +373,9 @@ int main() {
         cout << "Error: Matrix row/columns must be larger than 2." << endl;
     }
 
-    cout << "Attempting to create and initialize a new matrix(10, 10, 1)." << endl;
+    cout << "Attempting to create and initialize a new matrix(10, 10)." << endl;
     try {
-        Matrix matrix(10, 10, 1);
+        Matrix matrix(10, 10);
         cout << "Matrix initialized successfully." << endl;
         matrix.printMatrix();
         cout << "Sorted: ";
@@ -389,9 +389,9 @@ int main() {
         cout << "Error: Matrix row/columns must be larger than 2." << endl;
     }
 
-    cout << "Attempting to create and initialize a new matrix(8, 5, 2)." << endl;
+    cout << "Attempting to create and initialize a new matrix(8, 5)." << endl;
     try {
-        Matrix matrix(8, 5, 2);
+        Matrix matrix(8, 5);
         cout << "Matrix initialized successfully." << endl;
         matrix.printMatrix();
         cout << "Sorted: ";
@@ -405,9 +405,9 @@ int main() {
         cout << "Error: Matrix row/columns must be larger than 2." << endl;
     }
 
-    cout << "Attempting to create and initialize a new matrix(6, 10, 3)." << endl;
+    cout << "Attempting to create and initialize a new matrix(6, 10)." << endl;
     try {
-        Matrix matrix(6, 10, 10);
+        Matrix matrix(6, 10);
         cout << "Matrix initialized successfully." << endl;
         matrix.printMatrix();
         cout << "Sorted: ";
