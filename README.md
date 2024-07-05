@@ -8,7 +8,7 @@ The program showcases the following operations:
 
 - **Constructor Variations:**
     - `Matrix(int, int)`: Initializes a matrix with specified dimensions, throwing an exception if rows or columns are less than or equal to 2.
-    - `Matrix(int rows, int, int)`: Initializes a matrix with specified dimensions and initializes all elements to the given value, throwing an exception if rows or columns are less than or equal to 2.
+    - `Matrix(int, int, int)`: Initializes a matrix with specified dimensions and initializes all elements to the given value, throwing an exception if rows or columns are less than or equal to 2.
 
 - **Destructor:**
     - `~Matrix()`: Cleans up resources allocated to Matrix objects.
