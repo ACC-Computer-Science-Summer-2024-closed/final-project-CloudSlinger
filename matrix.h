@@ -13,7 +13,6 @@ This file is included by matrix.cpp for the implementation of the Matrix class m
 
 #define ROWS 2
 #define COLS 2
-#define INITVALUE 0
 
 using std::cout;
 using std::endl;
@@ -70,7 +69,7 @@ private:
     /**********************
     Private Methods
     ***********************/
-    void setMatrix(int, int, int);
+    void setMatrix(int, int, int initValue = 0);
 
 };
 
