@@ -519,7 +519,7 @@ int main() {
         findValue1 = -10;
         findValue2 = 19;
         findValue3 = 45;
-        cout << "Use binary search to look for values " << findValue1 << ", " << findValue2 << ", " << findValue3 << " in matrix." << endl;
+        cout << "Using binary search to look for values " << findValue1 << ", " << findValue2 << ", " << findValue3 << " in matrix." << endl;
         if (matrix.findValue(findValue1)) {
             cout << "Found: " << findValue1 << endl;
         } else {
@@ -545,7 +545,6 @@ int main() {
 
         cout << "\nMin: " << matrix.min() << ", Max: " << matrix.max() << endl;
         cout << "\n" << endl;
-
 
     } catch (int e) {
         cout << "Error: Matrix row/columns must be larger than 2." << endl;
