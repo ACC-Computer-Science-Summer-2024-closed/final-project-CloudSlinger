@@ -9,7 +9,7 @@ a function to print a message to the console.
 
 int main() {
 
-    cout << "Attempting to create and initialize matrix(2, 0)." << endl;
+    cout << "Attempting to create and initialize matrix(2, 0) without a default value." << endl;
     try {
         Matrix matrix(2, 0);
     } catch (int e) {
@@ -17,7 +17,7 @@ int main() {
         cout << endl;
     }
 
-    cout << "Attempting to create and initialize matrix(0, 2)." << endl;
+    cout << "Attempting to create and initialize matrix(0, 2) without a default value." << endl;
     try {
         Matrix matrix(0, 2);
     } catch (int e) {
@@ -25,7 +25,7 @@ int main() {
         cout << endl;
     }
 
-    cout << "Attempting to create and initialize matrix(3, -1)." << endl;
+    cout << "Attempting to create and initialize matrix(3, -1) without a default value." << endl;
     try {
         Matrix matrix(3, -1);
     } catch (int e) {
@@ -33,7 +33,7 @@ int main() {
         cout << endl;
     }
 
-    cout << "Attempting to create and initialize matrix(-1, 3)." << endl;
+    cout << "Attempting to create and initialize matrix(-1, 3) without a default value." << endl;
     try {
         Matrix matrix(-1, 3);
     } catch (int e) {
@@ -41,7 +41,7 @@ int main() {
         cout << endl;
     }
 
-    cout << "Attempting to create and initialize matrix(2, 2)." << endl;
+    cout << "Attempting to create and initialize matrix(2, 2) without a default value." << endl;
     try {
         Matrix matrix(2, 2);
     } catch (int e) {
@@ -49,7 +49,7 @@ int main() {
         cout << endl;
     }
 
-    cout << "Attempting to create and initialize matrix(3, 2)." << endl;
+    cout << "Attempting to create and initialize matrix(3, 2) without a default value." << endl;
     try {
         Matrix matrix(3, 2);
     } catch (int e) {
@@ -57,7 +57,7 @@ int main() {
         cout << endl;
     }
 
-    cout << "Attempting to create and initialize matrix(2, 3)." << endl;
+    cout << "Attempting to create and initialize matrix(2, 3) without a default value." << endl;
     try {
         Matrix matrix(2, 3);
     } catch (int e) {
@@ -65,7 +65,7 @@ int main() {
         cout << endl;
     }
 
-    cout << "Attempting to create and initialize matrix(3, 3)." << endl;
+    cout << "Attempting to create and initialize matrix(3, 3) without a default value." << endl;
     try {
         Matrix matrix(3, 3);
         cout << "Matrix initialized successfully." << endl;
@@ -83,7 +83,7 @@ int main() {
         cout << endl;
     }
 
-    cout << "Attempting to create and initialize matrix(2, 2, 0)." << endl;
+    cout << "Attempting to create and initialize matrix(2, 2, 0) with a default value." << endl;
     try {
         Matrix matrix(2, 2, 0);
     } catch (int e) {
@@ -91,7 +91,7 @@ int main() {
         cout << endl;
     }
 
-    cout << "Attempting to create and initialize matrix(3, -1, 0)." << endl;
+    cout << "Attempting to create and initialize matrix(3, -1, 0) with a default value." << endl;
     try {
         Matrix matrix(3, -1, 0);
     } catch (int e) {
@@ -99,7 +99,7 @@ int main() {
         cout << endl;
     }
 
-    cout << "Attempting to create and initialize matrix(-1, 3, 0)." << endl;
+    cout << "Attempting to create and initialize matrix(-1, 3, 0) with a default value." << endl;
     try {
         Matrix matrix(-1, 3, 0);
     } catch (int e) {
@@ -107,7 +107,7 @@ int main() {
         cout << endl;
     }
 
-    cout << "Attempting to create and initialize matrix(3, 2, 0)." << endl;
+    cout << "Attempting to create and initialize matrix(3, 2, 0) with a default value." << endl;
     try {
         Matrix matrix(3, 2, 0);
     } catch (int e) {
@@ -115,7 +115,7 @@ int main() {
         cout << endl;
     }
 
-    cout << "Attempting to create and initialize matrix(2, 3, 0)." << endl;
+    cout << "Attempting to create and initialize matrix(2, 3, 0) with a default value." << endl;
     try {
         Matrix matrix(2, 3, 0);
     } catch (int e) {
@@ -123,7 +123,7 @@ int main() {
         cout << endl;
     }
 
-    cout << "Attempting to create and initialize matrix(3, 3, -1)." << endl;
+    cout << "Attempting to create and initialize matrix(3, 3, -1) with a default value." << endl;
     try {
         Matrix matrix(3, 3, -1);
         cout << "Matrix initialized successfully." << endl;
@@ -140,7 +140,7 @@ int main() {
         cout << endl;
     }
 
-    cout << "Attempting to create and initialize matrix(3, 3, 0)." << endl;
+    cout << "Attempting to create and initialize matrix(3, 3, 0) with a default value." << endl;
     try {
         Matrix matrix(3, 3, 0);
         cout << "Matrix initialized successfully." << endl;
@@ -157,7 +157,7 @@ int main() {
         cout << endl;
     }
 
-    cout << "Attempting to create and initialize matrix(3, 3, 5)." << endl;
+    cout << "Attempting to create and initialize matrix(3, 3, 5) with a default value." << endl;
     try {
         Matrix matrix(3, 3, 5);
         cout << "Matrix initialized successfully." << endl;
@@ -373,7 +373,7 @@ int main() {
         cout << "Error: Matrix row/columns must be larger than 2." << endl;
     }
 
-    cout << "Attempting to create and initialize a new matrix(10, 10)." << endl;
+    cout << "Attempting to create and initialize a new matrix(10, 10) without a default value." << endl;
     try {
         Matrix matrix(10, 10);
         cout << "Matrix initialized successfully." << endl;
@@ -389,7 +389,7 @@ int main() {
         cout << "Error: Matrix row/columns must be larger than 2." << endl;
     }
 
-    cout << "Attempting to create and initialize a new matrix(8, 5)." << endl;
+    cout << "Attempting to create and initialize a new matrix(8, 5) without a default value." << endl;
     try {
         Matrix matrix(8, 5);
         cout << "Matrix initialized successfully." << endl;
@@ -405,7 +405,7 @@ int main() {
         cout << "Error: Matrix row/columns must be larger than 2." << endl;
     }
 
-    cout << "Attempting to create and initialize a new matrix(6, 10)." << endl;
+    cout << "Attempting to create and initialize a new matrix(6, 10) without a default value." << endl;
     try {
         Matrix matrix(6, 10);
         cout << "Matrix initialized successfully." << endl;
