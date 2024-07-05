@@ -25,7 +25,7 @@ Matrix::Matrix(int rows, int cols) {
         throw 0;
     }
 
-    setMatrix(rows, cols, INITVALUE);
+    setMatrix(rows, cols);
 }
 
 Matrix::Matrix(int rows, int cols, int initValue) {
