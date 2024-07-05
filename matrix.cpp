@@ -15,25 +15,16 @@ Matrix::Matrix(int rows, int cols) {
 
     @param rows : the number of rows in the matrix
     @param cols : the number of columns in the matrix
+
+    @return na : na
+
+    @exception na : na
     *********************************************/
     if (rows <= ROWS || cols <= COLS) {
         throw 0;
     }
-    this->rows = rows;
-    this->cols = cols;
-    sorted = false;
 
-    data = new int*[rows];
-
-    for (int i = 0; i < rows; ++i) {
-        data[i] = new int[cols];
-    }
-
-    for (int i = 0; i < rows; ++i) {
-        for (int j = 0; j < cols; ++j) {
-            data[i][j] = INITVALUE;
-        }
-    }
+    setMatrix(rows, cols, INITVALUE);
 }
 
 Matrix::Matrix(int rows, int cols, int initValue) {
@@ -46,25 +37,16 @@ Matrix::Matrix(int rows, int cols, int initValue) {
     @param rows : the number of rows in the matrix
     @param cols : the number of columns in the matrix
     @param initValue : the initial value for all elements
+
+    @return na : na
+
+    @exception na : na
     *********************************************/
     if (rows <= ROWS || cols <= COLS) {
         throw 0;
     }
-    this->rows = rows;
-    this->cols = cols;
-    sorted = false;
 
-    data = new int*[rows];
-
-    for (int i = 0; i < rows; ++i) {
-        data[i] = new int[cols];
-    }
-
-    for (int i = 0; i < rows; ++i) {
-        for (int j = 0; j < cols; ++j) {
-            data[i][j] = initValue;
-        }
-    }
+    setMatrix(rows, cols, initValue);
 }
 
 
@@ -176,6 +158,8 @@ double Matrix::rowAverage(int row)  {
     @param row : the row index for which the average is calculated
 
     @return double : the average of elements in the specified row
+
+    @exception na : na
     *********************************************/
 
     return static_cast<double>(rowSum(row)) / cols;
@@ -187,6 +171,8 @@ int Matrix::min() {
     This method finds the minimum value in the entire matrix.
 
     @return int : the minimum value found in the matrix
+
+    @exception na : na
     *********************************************/
 
     int minValue = data[0][0];
@@ -206,6 +192,8 @@ int Matrix::max() {
     This method finds the maximum value in the entire matrix.
 
     @return int : the maximum value found in the matrix
+
+    @exception na : na
     *********************************************/
 
     int maxValue = data[0][0];
@@ -286,6 +274,39 @@ bool Matrix::getSorted() {
 
     @exception na : na
     *********************************************/
+
     return sorted;
 }
 
+void Matrix::setMatrix(int rows, int cols, int initValue) {
+    /*********************************************
+    This method sets the matrix to the specified dimensions
+    and initializes all elements to the given value. Marks
+    the matrix as unsorted.
+
+    @param rows : the number of rows in the matrix
+    @param cols : the number of columns in the matrix
+    @param initValue : the value to set each element of the matrix (default is 0)
+
+    @return void : na
+
+    @exception na : na
+    *********************************************/
+
+    this->rows = rows;
+    this->cols = cols;
+
+    data = new int*[rows];
+
+    for (int i = 0; i < rows; ++i) {
+        data[i] = new int[cols];
+    }
+
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            data[i][j] = initValue;
+        }
+    }
+
+    sorted = false;
+}
