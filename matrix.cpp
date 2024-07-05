@@ -158,6 +158,7 @@ double Matrix::rowAverage(int row)  {
     *********************************************/
 
     return static_cast<double>(rowSum(row)) / cols;
+
 }
 
 void Matrix::sortMatrix() {
