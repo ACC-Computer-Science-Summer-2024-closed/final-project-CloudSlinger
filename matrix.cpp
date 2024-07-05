@@ -95,7 +95,7 @@ void Matrix::printRow(int row){
 
     @return void : does not return a value
 
-    @exception int : throws an integer exception if the row index is invalid
+    @exception na : na
     *********************************************/
 
     if (row >= 0 && row < rows) {
@@ -103,8 +103,6 @@ void Matrix::printRow(int row){
             cout << data[row][j] << " ";
         }
         cout << endl;
-    } else {
-        throw 0;
     }
 }
 
@@ -115,7 +113,7 @@ void Matrix::printColumn(int col){
 
     @return void : does not return a value
 
-    @exception int : throws an integer exception if the column index is invalid
+    @exception na : na
     *********************************************/
 
     if (col >= 0 && col < cols) {
@@ -123,8 +121,6 @@ void Matrix::printColumn(int col){
             cout << data[i][col] << " ";
         }
        cout << endl;
-    } else {
-        throw 0;
     }
 }
 
@@ -136,19 +132,17 @@ int Matrix::rowSum(int row) {
     @param row : the row index for which the sum is calculated
 
     @return int : the sum of elements in the specified row
-
-    @exception int : throws an integer exception if the row index is out of bounds
     *********************************************/
 
+    int sum = 0;
+
     if (row >= 0 && row < rows) {
-        int sum = 0;
         for (int j = 0; j < cols; ++j) {
             sum += data[row][j];
         }
-        return sum;
-    } else {
-        throw 0;
     }
+
+    return sum;
 }
 
 double Matrix::rowAverage(int row)  {
@@ -200,6 +194,7 @@ int Matrix::min() {
             }
         }
     }
+
     return minValue;
 }
 
@@ -221,6 +216,7 @@ int Matrix::max() {
             }
         }
     }
+
     return maxValue;
 }
 
@@ -303,14 +299,12 @@ void Matrix::setElement(int row, int col, int value) {
 
     @return void : does not return a value
 
-    @exception int : throws an integer exception if the row index is out of bounds
+    @exception na : na
     *********************************************/
 
     if (row >= 0 && row < rows && col >= 0 && col < cols) {
         data[row][col] = value;
         sorted = false;
-    } else {
-        throw 0;
     }
 }
 
