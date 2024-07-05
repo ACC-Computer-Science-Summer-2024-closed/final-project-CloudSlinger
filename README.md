@@ -32,4 +32,4 @@ This C++ program implements an integer matrix class, facilitating dynamic creati
 
 - **sortMatrix()**: Sorts each row of the matrix.
 
-Each method is designed to efficiently handle matrix operations and provide flexibility in matrix manipulation and analysis.
+
