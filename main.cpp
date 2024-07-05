@@ -407,7 +407,7 @@ int main() {
 
     cout << "Attempting to create and initialize a new matrix(6, 10, 3)." << endl;
     try {
-        Matrix matrix(6, 10, 3);
+        Matrix matrix(6, 10, 10);
         cout << "Matrix initialized successfully." << endl;
         matrix.printMatrix();
         cout << "Sorted: ";
@@ -450,9 +450,22 @@ int main() {
 
         newValue = 4;
         newRowIndex = 2;
-        newColIndex = 2;
+        newColIndex = 6;
         matrix.setElement(newRowIndex, newColIndex, newValue);
         cout << "Setting element at index (" << newRowIndex << ", " << newColIndex << ") to " << newValue << "." << endl;
+
+        newValue = 1;
+        newRowIndex = 2;
+        newColIndex = 9;
+        matrix.setElement(newRowIndex, newColIndex, newValue);
+        cout << "Setting element at index (" << newRowIndex << ", " << newColIndex << ") to " << newValue << "." << endl;
+
+        newValue = 0;
+        newRowIndex = 3;
+        newColIndex = 7;
+        matrix.setElement(newRowIndex, newColIndex, newValue);
+        cout << "Setting element at index (" << newRowIndex << ", " << newColIndex << ") to " << newValue << "." << endl;
+
 
         newValue = 19;
         newRowIndex = 3;
@@ -460,8 +473,26 @@ int main() {
         matrix.setElement(newRowIndex, newColIndex, newValue);
         cout << "Setting element at index (" << newRowIndex << ", " << newColIndex << ") to " << newValue << "." << endl;
 
+        newValue = 49;
+        newRowIndex = 4;
+        newColIndex = 4;
+        matrix.setElement(newRowIndex, newColIndex, newValue);
+        cout << "Setting element at index (" << newRowIndex << ", " << newColIndex << ") to " << newValue << "." << endl;
+
         newValue = 45;
         newRowIndex = 4;
+        newColIndex = 8;
+        matrix.setElement(newRowIndex, newColIndex, newValue);
+        cout << "Setting element at index (" << newRowIndex << ", " << newColIndex << ") to " << newValue << "." << endl;
+
+        newValue = 9;
+        newRowIndex = 5;
+        newColIndex = 0;
+        matrix.setElement(newRowIndex, newColIndex, newValue);
+        cout << "Setting element at index (" << newRowIndex << ", " << newColIndex << ") to " << newValue << "." << endl;
+
+        newValue = 39;
+        newRowIndex = 5;
         newColIndex = 5;
         matrix.setElement(newRowIndex, newColIndex, newValue);
         cout << "Setting element at index (" << newRowIndex << ", " << newColIndex << ") to " << newValue << "." << endl;
