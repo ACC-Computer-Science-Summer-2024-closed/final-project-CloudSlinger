@@ -308,7 +308,7 @@ int main() {
         int findValue1 = 17;
         int findValue2 = 100;
         int findValue3 = 28;
-        cout << "Looking for values " << findValue1 << ", " << findValue2 << ", " << findValue3 << " in matrix." << endl;
+        cout << "Using linear search to look for values " << findValue1 << ", " << findValue2 << ", " << findValue3 << " in matrix." << endl;
         if (matrix.findValue(findValue1)) {
             cout << "Found: " << findValue1 << endl;
         } else {
@@ -351,7 +351,7 @@ int main() {
         findValue1 = -3;
         findValue2 = 2;
         findValue3 = 56;
-        cout << "Use binary search to look for values " << findValue1 << ", " << findValue2 << ", " << findValue3 << " in matrix." << endl;
+        cout << "Using binary search to look for values " << findValue1 << ", " << findValue2 << ", " << findValue3 << " in matrix." << endl;
         if (matrix.findValue(findValue1)) {
             cout << "Found: " << findValue1 << endl;
         } else {
@@ -522,7 +522,7 @@ int main() {
         int findValue1 = 32;
         int findValue2 = 4;
         int findValue3 = 256;
-        cout << "Looking for values " << findValue1 << ", " << findValue2 << ", " << findValue3 << " in matrix." << endl;
+        cout << "Using linear search to look for values " << findValue1 << ", " << findValue2 << ", " << findValue3 << " in matrix." << endl;
         if (matrix.findValue(findValue1)) {
             cout << "Found: " << findValue1 << endl;
         } else {
