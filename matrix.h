@@ -49,6 +49,7 @@ public:
     int min();
     int max();
     bool getSorted();
+    void setMatrix(int, int, int);
 
 
     /**********************
