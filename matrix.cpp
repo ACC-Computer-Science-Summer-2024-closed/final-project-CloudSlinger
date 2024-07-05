@@ -309,6 +309,7 @@ void Matrix::setElement(int row, int col, int value) {
 }
 
 void Matrix::setMatrix(int rows, int cols, int initValue) {
+
     /*********************************************
     This method sets the matrix to the specified dimensions
     and initializes all elements to the given value. Marks
@@ -338,7 +339,7 @@ void Matrix::setMatrix(int rows, int cols, int initValue) {
         }
     }
 
-    sorted = true;
+    sorted = false;
 }
 
 bool Matrix::getSorted() {
