@@ -171,11 +171,6 @@ int main() {
         cout << "\n" << endl;
 
         int rowIndex = 1;
-        cout << "Sum row index " << rowIndex << ": " << matrix.rowSum(rowIndex) << endl;
-        cout << "Average row index " << rowIndex << ": " << matrix.rowAverage(rowIndex) << endl;
-        cout << "Min: " << matrix.min() << endl;
-        cout << "Max: " << matrix.max() << endl;
-        cout << endl;
 
         int newValue = 10;
         int newRowIndex = 1;
@@ -189,14 +184,15 @@ int main() {
         } else {
             cout << "false";
         }
-        cout << "\n" << endl;
-        cout << "Row index " << rowIndex << ":" << endl;
-        matrix.printRow(rowIndex);
         cout << endl;
-        cout << "Sum: " << matrix.rowSum(rowIndex) << endl;
-        cout << "Average: " << matrix.rowAverage(rowIndex) << endl;
-        cout << "Min: " << matrix.min() << endl;
-        cout << "Max: " << matrix.max() << endl;
+        cout << "Min: " << matrix.min() << ", Max: " << matrix.max() << endl;
+        cout << endl;
+
+        cout << "Row " << rowIndex << ":" << endl;
+
+        matrix.printRow(rowIndex);
+
+        cout << "Sum: " << matrix.rowSum(newRowIndex) << ", Average: " << matrix.rowAverage(newRowIndex) << endl;
         cout << endl;
 
         newValue = 17;
@@ -212,14 +208,16 @@ int main() {
         } else {
             cout << "false";
         }
-        cout << "\n" << endl;
-        cout << "Row index " << rowIndex << ":" << endl;
-        matrix.printRow(rowIndex);
+
         cout << endl;
-        cout << "Sum: " << matrix.rowSum(rowIndex) << endl;
-        cout << "Average: " << matrix.rowAverage(rowIndex) << endl;
-        cout << "Min: " << matrix.min() << endl;
-        cout << "Max: " << matrix.max() << endl;
+        cout << "Min: " << matrix.min() << ", Max: " << matrix.max() << endl;
+        cout << endl;
+
+        cout << "Row " << rowIndex << ":" << endl;
+
+        matrix.printRow(rowIndex);
+
+        cout << "Sum: " << matrix.rowSum(rowIndex) << ", Average: " << matrix.rowAverage(rowIndex) << endl;
         cout << endl;
 
         newValue = -3;
@@ -257,6 +255,7 @@ int main() {
         newColIndex = 2;
         matrix.setElement(newRowIndex, newColIndex, newValue);
         cout << "Setting element at index (" << newRowIndex << ", " << newColIndex << ") to " << newValue << "." << endl;
+        cout << endl;
 
         rowIndex = 0;
         matrix.printMatrix();
@@ -266,26 +265,19 @@ int main() {
         } else {
             cout << "false";
         }
+
         cout << "\n" << endl;
-        cout << "Row index " << rowIndex << ":" << endl;
-        matrix.printRow(rowIndex);
-        cout << endl;
-        cout << "Sum: " << matrix.rowSum(rowIndex) << endl;
-        cout << "Average: " << matrix.rowAverage(rowIndex) << endl;
-        cout << "Min: " << matrix.min() << endl;
-        cout << "Max: " << matrix.max() << endl;
-        cout << endl;
 
         int colIndex = 0;
-        cout << "Column index " << colIndex << ":" << endl;
+        cout << "Column " << colIndex << ":" << endl;
         matrix.printColumn(colIndex);
         colIndex = 1;
         cout << endl;
-        cout << "Column index " << colIndex << ":" << endl;
+        cout << "Column " << colIndex << ":" << endl;
         matrix.printColumn(colIndex);
         colIndex = 2;
         cout << endl;
-        cout << "Column index " << colIndex << ":" << endl;
+        cout << "Column " << colIndex << ":" << endl;
         matrix.printColumn(colIndex);
         cout << endl;
 
@@ -301,15 +293,15 @@ int main() {
         cout << "\n" << endl;
 
         rowIndex = 0;
-        cout << "Row index " << rowIndex << ":" << endl;
+        cout << "Row " << rowIndex << ":" << endl;
         matrix.printRow(rowIndex);
         rowIndex = 1;
         cout << endl;
-        cout << "Row index " << rowIndex << ":" << endl;
+        cout << "Row " << rowIndex << ":" << endl;
         matrix.printRow(rowIndex);
         rowIndex = 2;
         cout << endl;
-        cout << "Row index " << rowIndex << ":" << endl;
+        cout << "Row " << rowIndex << ":" << endl;
         matrix.printRow(rowIndex);
         cout << endl;
 
@@ -317,14 +309,6 @@ int main() {
         int findValue2 = 100;
         int findValue3 = 28;
         cout << "Looking for values " << findValue1 << ", " << findValue2 << ", " << findValue3 << " in matrix." << endl;
-        matrix.printMatrix();
-        cout << "Sorted: ";
-        if (matrix.getSorted()) {
-            cout << "true";
-        } else {
-            cout << "false";
-        }
-        cout << "\n" << endl;
         if (matrix.findValue(findValue1)) {
             cout << "Found: " << findValue1 << endl;
         } else {
@@ -367,7 +351,7 @@ int main() {
         findValue1 = -3;
         findValue2 = 2;
         findValue3 = 56;
-        cout << "Binary search for values " << findValue1 << ", " << findValue2 << ", " << findValue3 << " in matrix." << endl;
+        cout << "Use binary search to look for values " << findValue1 << ", " << findValue2 << ", " << findValue3 << " in matrix." << endl;
         if (matrix.findValue(findValue1)) {
             cout << "Found: " << findValue1 << endl;
         } else {
@@ -433,6 +417,136 @@ int main() {
             cout << "false";
         }
         cout << "\n" << endl;
+
+        int newValue = -3;
+        int newRowIndex = 0;
+        int newColIndex = 0;
+        matrix.setElement(newRowIndex, newColIndex, newValue);
+        cout << "Setting element at index (" << newRowIndex << ", " << newColIndex << ") to " << newValue << "." << endl;
+
+        newValue = 32;
+        newRowIndex = 0;
+        newColIndex = 1;
+        matrix.setElement(newRowIndex, newColIndex, newValue);
+        cout << "Setting element at index (" << newRowIndex << ", " << newColIndex << ") to " << newValue << "." << endl;
+
+        newValue = 2;
+        newRowIndex = 0;
+        newColIndex = 2;
+        matrix.setElement(newRowIndex, newColIndex, newValue);
+        cout << "Setting element at index (" << newRowIndex << ", " << newColIndex << ") to " << newValue << "." << endl;
+
+        newValue = 28;
+        newRowIndex = 1;
+        newColIndex = 1;
+        matrix.setElement(newRowIndex, newColIndex, newValue);
+        cout << "Setting element at index (" << newRowIndex << ", " << newColIndex << ") to " << newValue << "." << endl;
+
+        newValue = 62;
+        newRowIndex = 1;
+        newColIndex = 0;
+        matrix.setElement(newRowIndex, newColIndex, newValue);
+        cout << "Setting element at index (" << newRowIndex << ", " << newColIndex << ") to " << newValue << "." << endl;
+
+        newValue = 4;
+        newRowIndex = 2;
+        newColIndex = 2;
+        matrix.setElement(newRowIndex, newColIndex, newValue);
+        cout << "Setting element at index (" << newRowIndex << ", " << newColIndex << ") to " << newValue << "." << endl;
+
+        newValue = 19;
+        newRowIndex = 3;
+        newColIndex = 4;
+        matrix.setElement(newRowIndex, newColIndex, newValue);
+        cout << "Setting element at index (" << newRowIndex << ", " << newColIndex << ") to " << newValue << "." << endl;
+
+        newValue = 45;
+        newRowIndex = 4;
+        newColIndex = 5;
+        matrix.setElement(newRowIndex, newColIndex, newValue);
+        cout << "Setting element at index (" << newRowIndex << ", " << newColIndex << ") to " << newValue << "." << endl;
+
+        newValue = 27;
+        newRowIndex = 5;
+        newColIndex = 9;
+        matrix.setElement(newRowIndex, newColIndex, newValue);
+        cout << "Setting element at index (" << newRowIndex << ", " << newColIndex << ") to " << newValue << "." << endl;
+
+        cout << endl;
+        cout << "Matrix before sorting each row." << endl;
+        matrix.printMatrix();
+        cout << "Sorted: ";
+        if (matrix.getSorted()) {
+            cout << "true";
+        } else {
+            cout << "false";
+        }
+        cout << "\n" << endl;
+
+        int findValue1 = 32;
+        int findValue2 = 4;
+        int findValue3 = 256;
+        cout << "Looking for values " << findValue1 << ", " << findValue2 << ", " << findValue3 << " in matrix." << endl;
+        if (matrix.findValue(findValue1)) {
+            cout << "Found: " << findValue1 << endl;
+        } else {
+            cout << "Not found: " << findValue1 << endl;
+        }
+        if (matrix.findValue(findValue2)) {
+            cout << "Found " << findValue2 << endl;
+        } else {
+            cout << "Not found: " << findValue2 << endl;
+        }
+        if (matrix.findValue(findValue3)) {
+            cout << "Found " << findValue3 << endl;
+        } else {
+            cout << "Not found: " << findValue3 << endl;
+        }
+        cout << endl;
+
+        matrix.sortMatrix();
+
+        cout << "Matrix after sorting each row." << endl;
+        matrix.printMatrix();
+        cout << "Sorted: ";
+        if (matrix.getSorted()) {
+            cout << "true";
+        } else {
+            cout << "false";
+        }
+        cout << "\n" << endl;
+
+        findValue1 = -10;
+        findValue2 = 19;
+        findValue3 = 45;
+        cout << "Use binary search to look for values " << findValue1 << ", " << findValue2 << ", " << findValue3 << " in matrix." << endl;
+        if (matrix.findValue(findValue1)) {
+            cout << "Found: " << findValue1 << endl;
+        } else {
+            cout << "Not found: " << findValue1 << endl;
+        }
+        if (matrix.findValue(findValue2)) {
+            cout << "Found " << findValue2 << endl;
+        } else {
+            cout << "Not found: " << findValue2 << endl;
+        }
+        if (matrix.findValue(findValue3)) {
+            cout << "Found " << findValue3 << endl;
+        } else {
+            cout << "Not found: " << findValue3 << endl;
+        }
+        cout << endl;
+
+        for (int i = 0; i < 6; ++i) {
+            int sum = matrix.rowSum(i);
+            double average = matrix.rowAverage(i);
+            cout << "Row " << i << " sum: " << sum << ", Average: " << average << endl;
+        }
+
+        cout << "\nMin: " << matrix.min() << ", Max: " << matrix.max() << endl;
+        cout << "\n" << endl;
+
+
     } catch (int e) {
         cout << "Error: Matrix row/columns must be larger than 2." << endl;
     }
