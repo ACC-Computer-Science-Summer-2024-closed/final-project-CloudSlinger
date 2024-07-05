@@ -123,9 +123,9 @@ int main() {
         cout << endl;
     }
 
-    cout << "Attempting to create and initialize matrix(3, 3, -1) with a default value." << endl;
+    cout << "Attempting to create and initialize matrix(3, 3, 0) with a default value." << endl;
     try {
-        Matrix matrix(3, 3, -1);
+        Matrix matrix(3, 3, 0);
         cout << "Matrix initialized successfully." << endl;
         matrix.printMatrix();
         cout << "Sorted: ";
@@ -140,9 +140,9 @@ int main() {
         cout << endl;
     }
 
-    cout << "Attempting to create and initialize matrix(3, 3, 0) with a default value." << endl;
+    cout << "Attempting to create and initialize matrix(3, 3, -1) with a default value." << endl;
     try {
-        Matrix matrix(3, 3, 0);
+        Matrix matrix(3, 3, -1);
         cout << "Matrix initialized successfully." << endl;
         matrix.printMatrix();
         cout << "Sorted: ";
