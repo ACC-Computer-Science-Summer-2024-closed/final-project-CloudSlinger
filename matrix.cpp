@@ -308,5 +308,37 @@ void Matrix::setMatrix(int rows, int cols, int initValue) {
         }
     }
 
-    sorted = false;
+    sorted = true;
+}
+
+bool Matrix::findValue(int value)  {
+
+    /*********************************************
+    This method searches for a given value in the Matrix.
+    If the Matrix is sorted, it uses binary search, else it performs a linear search.
+
+    @param value : the value to search for in the Matrix
+
+    @return bool : true if the value is found, otherwise false
+
+    @exception na : na
+    *********************************************/
+
+    bool valueFound = false;
+
+    for (int i = 0; i < rows; ++i) {
+        if (sorted) {
+            if (std::binary_search(data[i], data[i] + cols, value)) {
+                valueFound = true;
+            }
+        } else {
+            for (int j = 0; j < cols; ++j) {
+                if (data[i][j] == value) {
+                    valueFound = true;
+                }
+            }
+        }
+    }
+
+    return valueFound;
 }
