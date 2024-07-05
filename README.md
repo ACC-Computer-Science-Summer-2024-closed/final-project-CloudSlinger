@@ -32,4 +32,7 @@ This C++ program implements an integer matrix class, facilitating dynamic creati
 
 - **sortMatrix()**: Sorts each row of the matrix.
 
+### Searching
+
+- **findValue(int)**: Searches for a given value in the matrix. Utilizes binary search if the matrix is sorted; otherwise, performs a linear search.
 
