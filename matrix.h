@@ -9,7 +9,6 @@ This file is included by matrix.cpp for the implementation of the Matrix class m
 #define MATRIX_H
 
 #include <iostream>     /* cout, endl */
-#include <stdlib.h>     /* srand, rand */
 #include <algorithm>    /* binary_search */
 
 #define ROWS 2
@@ -57,6 +56,7 @@ public:
     ***********************/
     void setElement(int, int, int);
     void rotateMatrix();
+    void sortMatrix();
 
 private:
     /**********************
