@@ -9,7 +9,6 @@ needed for main.cpp.
 #define MAIN_H
 
 #include <iostream>     /* cout, endl */
-#include <stdlib.h>     /* srand, rand */
 
 #include "matrix.h"
 
