@@ -20,6 +20,7 @@ Matrix::Matrix(int rows, int cols) {
 
     @exception na : na
     *********************************************/
+
     if (rows <= ROWS || cols <= COLS) {
         throw 0;
     }
@@ -42,6 +43,7 @@ Matrix::Matrix(int rows, int cols, int initValue) {
 
     @exception na : na
     *********************************************/
+
     if (rows <= ROWS || cols <= COLS) {
         throw 0;
     }
@@ -66,7 +68,6 @@ Matrix::~Matrix(){
         delete[] data[i];
     }
     delete[] data;
-
 }
 
 void Matrix::printMatrix(){
@@ -341,4 +342,19 @@ bool Matrix::findValue(int value)  {
     }
 
     return valueFound;
+}
+
+void Matrix::sortMatrix() {
+    /*********************************************
+    This method sorts each row of the matrix.
+
+    @return void : does not return a value
+
+    @exception na : na
+    *********************************************/
+    for (int i = 0; i < rows; ++i) {
+        std::sort(data[i], data[i] + cols);
+    }
+
+    sorted = true;
 }
