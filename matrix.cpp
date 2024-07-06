@@ -145,19 +145,19 @@ int Matrix::rowSum(int row) {
     return sum;
 }
 
-double Matrix::rowAverage(int row)  {
+float Matrix::rowAverage(int row)  {
 
     /*********************************************
     This method calculates the average of elements in a specific row of the matrix.
 
     @param row : the row index for which the average is calculated
 
-    @return double : the average of elements in the specified row
+    @return float : the average of elements in the specified row
 
     @exception na : na
     *********************************************/
 
-    return static_cast<double>(rowSum(row)) / cols;
+    return static_cast<float >(rowSum(row)) / cols;
 }
 
 void Matrix::sortMatrix() {
