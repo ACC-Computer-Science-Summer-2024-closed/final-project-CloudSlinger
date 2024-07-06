@@ -44,7 +44,7 @@ public:
     void printRow(int);
     void printColumn(int);
     int rowSum(int);
-    double rowAverage(int);
+    float rowAverage(int);
     int min();
     int max();
     bool findValue(int);
