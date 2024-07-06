@@ -391,7 +391,7 @@ int main() {
 
     cout << "Attempting to create and initialize matrix(3, 3, 5) with a default value." << endl;
     try {
-        Matrix matrix(3, 3, 5);
+        Matrix matrix(5, 5, 5);
         cout << "Matrix initialized successfully." << endl;
         matrix.printMatrix();
         cout << "Sorted: ";
@@ -484,6 +484,36 @@ int main() {
 
         newValue = 4;
         newRowIndex = 2;
+        newColIndex = 2;
+        matrix.setElement(newRowIndex, newColIndex, newValue);
+        cout << "Setting element at index (" << newRowIndex << ", " << newColIndex << ") to " << newValue << "." << endl;
+
+        newValue = 7;
+        newRowIndex = 2;
+        newColIndex = 4;
+        matrix.setElement(newRowIndex, newColIndex, newValue);
+        cout << "Setting element at index (" << newRowIndex << ", " << newColIndex << ") to " << newValue << "." << endl;
+
+        newValue = 41;
+        newRowIndex = 3;
+        newColIndex = 0;
+        matrix.setElement(newRowIndex, newColIndex, newValue);
+        cout << "Setting element at index (" << newRowIndex << ", " << newColIndex << ") to " << newValue << "." << endl;
+
+        newValue = 21;
+        newRowIndex = 3;
+        newColIndex = 4;
+        matrix.setElement(newRowIndex, newColIndex, newValue);
+        cout << "Setting element at index (" << newRowIndex << ", " << newColIndex << ") to " << newValue << "." << endl;
+
+        newValue = 81;
+        newRowIndex = 3;
+        newColIndex = 3;
+        matrix.setElement(newRowIndex, newColIndex, newValue);
+        cout << "Setting element at index (" << newRowIndex << ", " << newColIndex << ") to " << newValue << "." << endl;
+
+        newValue = 25;
+        newRowIndex = 4;
         newColIndex = 2;
         matrix.setElement(newRowIndex, newColIndex, newValue);
         cout << "Setting element at index (" << newRowIndex << ", " << newColIndex << ") to " << newValue << "." << endl;
@@ -603,7 +633,7 @@ int main() {
         }
         cout << endl;
 
-        for (int i = 0; i < 3; ++i) {
+        for (int i = 0; i < 5; ++i) {
             cout << "Row " << i << " sum: " << matrix.rowSum(i) << ", Average: " << matrix.rowAverage(i) << endl;
         }
 
