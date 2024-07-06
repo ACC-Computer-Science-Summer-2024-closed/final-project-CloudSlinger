@@ -51,7 +51,6 @@ Matrix::Matrix(int rows, int cols, int initValue) {
     setMatrix(rows, cols, initValue);
 }
 
-
 Matrix::~Matrix(){
 
     /*********************************************
