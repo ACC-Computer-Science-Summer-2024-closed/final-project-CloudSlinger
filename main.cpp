@@ -286,9 +286,7 @@ int main() {
         cout << endl;
 
         for (int i = 0; i < 6; ++i) {
-            int sum = matrix.rowSum(i);
-            double average = matrix.rowAverage(i);
-            cout << "Row " << i << " sum: " << sum << ", Average: " << average << endl;
+            cout << "Row " << i << " sum: " << matrix.rowSum(i) << ", Average: " << matrix.rowAverage(i) << endl;
         }
         cout << endl;
 
@@ -586,9 +584,7 @@ int main() {
         cout << endl;
 
         for (int i = 0; i < 3; ++i) {
-            int sum = matrix.rowSum(i);
-            double average = matrix.rowAverage(i);
-            cout << "Row " << i << " sum: " << sum << ", Average: " << average << endl;
+            cout << "Row " << i << " sum: " << matrix.rowSum(i) << ", Average: " << matrix.rowAverage(i) << endl;
         }
 
     } catch (int e) {
