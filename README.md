@@ -36,6 +36,7 @@ This program supports command line arguments for matrix initialization:
 
 - **Three arguments**: With three arguments, the first argument specifies the number of rows, the second argument specifies the number of columns, and the third argument specifies the initial value for all matrix elements.
 
+Note: Command line arguments are optional. If not provided, the program initializes a default matrix.
 
 ### Sorting
 
