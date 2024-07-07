@@ -62,7 +62,7 @@ int main(int argc, char *argv[]) {
         cout << "Error: Too many arguments, expecting 2 or 3 and must be integers." << endl;
         cout << endl;
     }
-    
+
     cout << "Attempting to create and initialize matrix(2, 0) without a default value." << endl;
     try {
         Matrix matrix(2, 0);
@@ -439,7 +439,7 @@ int main(int argc, char *argv[]) {
         cout << endl;
     }
 
-    cout << "Attempting to create and initialize matrix(3, 3, 5) with a default value." << endl;
+    cout << "Attempting to create and initialize matrix(5, 5, 5) with a default value." << endl;
     try {
         Matrix matrix(5, 5, 5);
         cout << "Matrix initialized successfully." << endl;
