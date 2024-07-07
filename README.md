@@ -1,6 +1,6 @@
 # Final Project: Classes and Objects
 
-This C++ program implements an integer matrix class, facilitating dynamic creation and manipulation of matrices.
+This C++ program implements an integer matrix class, enabling the dynamic creation and manipulation of matrices.
 
 ## Functionality Overview
 
@@ -28,6 +28,15 @@ This C++ program implements an integer matrix class, facilitating dynamic creati
 - **sortMatrix()**: Sorts the values of the matrix on a per-row basis.
 - **findValue(int)**: Searches for a given value in the matrix.
 
+### Command Line Arguments
+
+This program supports command line arguments for matrix initialization:
+
+- **Two arguments**: With two arguments, the first argument specifies the number of rows and the second argument specifies the number of columns.
+
+- **Three arguments**: With three arguments, the first argument specifies the number of rows, the second argument specifies the number of columns, and the third argument specifies the initial value for all matrix elements.
+
+
 ### Sorting
 
 - **sortMatrix()**: Sorts each row of the matrix.
@@ -35,4 +44,5 @@ This C++ program implements an integer matrix class, facilitating dynamic creati
 ### Searching
 
 - **findValue(int)**: Searches for a given value in the matrix. Utilizes binary search if the matrix is sorted; otherwise, performs a linear search.
+
 
