@@ -10,8 +10,8 @@ This file is included by matrix.cpp for the implementation of the Matrix class m
 
 #include <iostream>     /* cout, endl */
 #include <algorithm>    /* binary_search */
-#include <cstdlib>      /* atoi */
 #include <string.h>     /* strlen */
+#include <cstdlib>      /* atoi */
 
 #define ROWS 2
 #define COLS 2
