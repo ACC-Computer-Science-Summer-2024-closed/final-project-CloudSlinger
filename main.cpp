@@ -7,7 +7,55 @@ a function to print a message to the console.
 
 #include "main.h"
 
-int main() {
+int main(int argc, char *argv[]) {
+
+    if (argc == 3) {
+        int rows = atoi(argv[1]);
+        int cols = atoi(argv[2]);
+
+        Matrix matrix(rows, cols);
+
+        if (!matrix.validInteger(argv[1]) || !matrix.validInteger(argv[2])) {
+            cout << "Error: Rows and columns must be integers." << endl;
+        } else {
+            cout << "Attempting to create and initialize matrix(" << argv[1] << ", " << argv[2] << ") based on command line parameters." << endl;
+            try {
+                if (rows <= ROWS || cols <= COLS) {
+                    throw 0;
+                }
+                cout << "Matrix initialized successfully." << endl;
+                matrix.printMatrix();
+            } catch (int e) {
+                cout << "Error: Matrix row/columns must be larger than 2." << endl;
+            }
+        }
+        cout << endl;
+    } else if (argc == 4) {
+        int rows = atoi(argv[1]);
+        int cols = atoi(argv[2]);
+        int initValue = atoi(argv[3]);
+
+        Matrix matrix(rows, cols, initValue);
+
+        if (!matrix.validInteger(argv[1]) || !matrix.validInteger(argv[2]) || !matrix.validInteger(argv[3])) {
+            cout << "Error: Rows, columns, and initial value must be integers." << endl;
+        } else {
+            cout << "Attempting to create and initialize matrix(" << argv[1] << ", " << argv[2] << ", " << argv[3] << ") based on command line parameters." << endl;
+            try {
+                if (rows <= ROWS || cols <= COLS) {
+                    throw 0;
+                }
+                cout << "Matrix initialized successfully." << endl;
+                matrix.printMatrix();
+            } catch (int e) {
+                cout << "Error: Matrix row/columns must be larger than 2." << endl;
+            }
+        }
+        cout << endl;
+    } else {
+        cout << "Error: Incorrect number of arguments, expecting 2 or 3." << endl;
+        cout << endl;
+    }
 
     cout << "Attempting to create and initialize matrix(2, 0) without a default value." << endl;
     try {
@@ -285,7 +333,6 @@ int main() {
         }
         cout << endl;
 
-
         newValue = 500;
         newRowIndex = 2;
         newColIndex = 4;
@@ -306,9 +353,6 @@ int main() {
             cout << "Row " << i << " sum: " << matrix.rowSum(i) << ", Average: " << matrix.rowAverage(i) << endl;
         }
         cout << endl;
-
-
-
 
     } catch (int e) {
         cout << "Error: Matrix row/columns must be larger than 2." << endl;
@@ -423,7 +467,6 @@ int main() {
         cout << "Row " << rowIndex << ":" << endl;
 
         matrix.printRow(rowIndex);
-
         cout << "Sum: " << matrix.rowSum(newRowIndex) << ", Average: " << matrix.rowAverage(newRowIndex) << endl;
         cout << endl;
 
@@ -446,9 +489,7 @@ int main() {
         cout << endl;
 
         cout << "Row " << rowIndex << ":" << endl;
-
         matrix.printRow(rowIndex);
-
         cout << "Sum: " << matrix.rowSum(rowIndex) << ", Average: " << matrix.rowAverage(rowIndex) << endl;
         cout << endl;
 
