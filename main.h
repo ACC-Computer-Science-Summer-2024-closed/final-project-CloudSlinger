@@ -9,6 +9,7 @@ needed for main.cpp.
 #define MAIN_H
 
 #include <iostream>     /* cout, endl */
+#include <cstdlib>      /* atoi */
 
 #include "matrix.h"
 
