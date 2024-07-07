@@ -13,13 +13,13 @@ int main(int argc, char *argv[]) {
         int rows = atoi(argv[1]);
         int cols = atoi(argv[2]);
 
+        cout << "Attempting to create matrix(" << argv[1] << ", " << argv[2] << ") based on command line parameters." << endl;
         try {
             Matrix matrix(rows, cols);
             if (!matrix.validInteger(argv[1]) || !matrix.validInteger(argv[2])) {
                 cout << "Error: Matrix row/columns must be integers." << endl;
                 cout << endl;
             } else {
-                cout << "Attempting to create matrix(" << argv[1] << ", " << argv[2] << ") based on command line parameters." << endl;
                 if (rows <= 2 || cols <= 2) {
                     throw 0;
                 }
@@ -37,12 +37,13 @@ int main(int argc, char *argv[]) {
         int cols = atoi(argv[2]);
         int initValue = atoi(argv[3]);
 
+        cout << "Attempting to create matrix(" << argv[1] << ", " << argv[2] << ", " << argv[3] << ") based on command line parameters." << endl;
         try {
             Matrix matrix(rows, cols, initValue);
             if (!matrix.validInteger(argv[1]) || !matrix.validInteger(argv[2]) || !matrix.validInteger(argv[3])) {
                 cout << "Error: Matrix row/columns and initial value must be integers." << endl;
+                cout << endl;
             } else {
-                cout << "Attempting to create matrix(" << argv[1] << ", " << argv[2] << ", " << argv[3] << ") based on command line parameters." << endl;
                 if (rows <= 2 || cols <= 2) {
                     throw 0;
                 }
