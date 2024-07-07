@@ -10,6 +10,8 @@ This file is included by matrix.cpp for the implementation of the Matrix class m
 
 #include <iostream>     /* cout, endl */
 #include <algorithm>    /* binary_search */
+#include <cstdlib>      /* atoi */
+#include <string.h>     /* strlen */
 
 #define ROWS 2
 #define COLS 2
@@ -49,6 +51,7 @@ public:
     int max();
     bool findValue(int);
     bool getSorted();
+    bool validInteger(char*);
 
     /**********************
     Setters/Mutators
