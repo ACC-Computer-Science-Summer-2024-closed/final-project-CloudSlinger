@@ -61,8 +61,11 @@ int main(int argc, char *argv[]) {
             cout << "Error: Matrix row/columns must be larger than 2." << endl;
             cout << endl;
         }
-    } else if (argc <= 1 || argc > 4) {
+    } else if (argc == 1) {
         cout << "Error: Incorrect number of arguments, expecting 2 or 3." << endl;
+        cout << endl;
+    } else if (argc > 4) {
+        cout << "Error: Too many arguments, expecting 2 or 3." << endl;
         cout << endl;
     }
 
