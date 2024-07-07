@@ -353,3 +353,37 @@ bool Matrix::getSorted() {
 
     return sorted;
 }
+
+bool Matrix::validInteger(char* str) {
+    /*********************************************
+     This method checks if the given string represents a valid integer.
+
+    @param str : the string to be processed
+
+    @return bool : true if the string a valid, otherwise false
+
+    @exception na : na
+    *********************************************/
+
+    bool valid_integer = true;
+
+    if (str == nullptr || str[0] == '\0') {
+        valid_integer = false;
+    } else {
+
+        int length = strlen(str);
+        int check_index = 0;
+
+        if (str[0] == '-') {
+            check_index = 1;
+        }
+
+        for (size_t i = check_index; i < length; ++i) {
+            if (!isdigit(str[i])) {
+                valid_integer = false;
+            }
+        }
+    }
+
+    return valid_integer;
+}
