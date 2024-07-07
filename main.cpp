@@ -16,22 +16,19 @@ int main(int argc, char *argv[]) {
         try {
             Matrix matrix(rows, cols);
             if (!matrix.validInteger(argv[1]) || !matrix.validInteger(argv[2])) {
-                cout << "Error: Rows and columns must be integers." << endl;
+                cout << "Error: Matrix row/columns must be integers." << endl;
+                cout << endl;
             } else {
-                cout << "Attempting to create and initialize matrix(" << argv[1] << ", " << argv[2] << ") based on command line parameters." << endl;
-                try {
-                    if (rows <= ROWS || cols <= COLS) {
-                        throw 0;
-                    }
-                    cout << "Matrix initialized successfully." << endl;
-                    matrix.printMatrix();
-                } catch (int e) {
-                    cout << "Error: Matrix row/columns must be larger than 2." << endl;
+                cout << "Attempting to create matrix(" << argv[1] << ", " << argv[2] << ") based on command line parameters." << endl;
+                if (rows <= 2 || cols <= 2) {
+                    throw 0;
                 }
+                cout << "Matrix initialized successfully." << endl;
+                matrix.printMatrix();
+                cout << endl;
             }
-            cout << endl;
         } catch (int e) {
-            cout << "Error: Matrix row/columns must be larger than 2." << endl;
+            cout << "Error: Matrix row/columns must be integers and larger than 2." << endl;
             cout << endl;
         }
 
@@ -43,32 +40,29 @@ int main(int argc, char *argv[]) {
         try {
             Matrix matrix(rows, cols, initValue);
             if (!matrix.validInteger(argv[1]) || !matrix.validInteger(argv[2]) || !matrix.validInteger(argv[3])) {
-                cout << "Error: Rows, columns, and initial value must be integers." << endl;
+                cout << "Error: Matrix row/columns and initial value must be integers." << endl;
             } else {
-                cout << "Attempting to create and initialize matrix(" << argv[1] << ", " << argv[2] << ", " << argv[3] << ") based on command line parameters." << endl;
-                try {
-                    if (rows <= ROWS || cols <= COLS) {
-                        throw 0;
-                    }
-                    cout << "Matrix initialized successfully." << endl;
-                    matrix.printMatrix();
-                } catch (int e) {
-                    cout << "Error: Matrix row/columns must be larger than 2." << endl;
+                cout << "Attempting to create matrix(" << argv[1] << ", " << argv[2] << ", " << argv[3] << ") based on command line parameters." << endl;
+                if (rows <= 2 || cols <= 2) {
+                    throw 0;
                 }
+                cout << "Matrix initialized successfully." << endl;
+                matrix.printMatrix();
+                cout << endl;
             }
-            cout << endl;
         } catch (int e) {
-            cout << "Error: Matrix row/columns must be larger than 2." << endl;
+            cout << "Error: Matrix row/columns and initial value must be integers and larger than 2." << endl;
             cout << endl;
         }
-    } else if (argc == 1) {
-        cout << "Error: Incorrect number of arguments, expecting 2 or 3." << endl;
+
+    } else if (argc == 2) {
+        cout << "Error: Incorrect number of arguments, expecting 2 or 3 and must be integers." << endl;
         cout << endl;
     } else if (argc > 4) {
-        cout << "Error: Too many arguments, expecting 2 or 3." << endl;
+        cout << "Error: Too many arguments, expecting 2 or 3 and must be integers." << endl;
         cout << endl;
     }
-
+    
     cout << "Attempting to create and initialize matrix(2, 0) without a default value." << endl;
     try {
         Matrix matrix(2, 0);
