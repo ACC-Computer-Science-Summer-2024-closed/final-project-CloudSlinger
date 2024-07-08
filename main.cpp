@@ -20,9 +20,6 @@ int main(int argc, char *argv[]) {
                 cout << "Error: Matrix row/columns must be integers." << endl;
                 cout << endl;
             } else {
-                if (rows <= ROWS || cols <= COLS) {
-                    throw 0;
-                }
                 cout << "Matrix initialized successfully." << endl;
                 matrix.printMatrix();
                 cout << endl;
@@ -44,9 +41,6 @@ int main(int argc, char *argv[]) {
                 cout << "Error: Matrix row/columns and initial value must be integers." << endl;
                 cout << endl;
             } else {
-                if (rows <= ROWS || cols <= COLS) {
-                    throw 0;
-                }
                 cout << "Matrix initialized successfully." << endl;
                 matrix.printMatrix();
                 cout << endl;
