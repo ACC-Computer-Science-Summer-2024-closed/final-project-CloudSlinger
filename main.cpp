@@ -624,7 +624,8 @@ int main(int argc, char *argv[]) {
         int findValue1 = 17;
         int findValue2 = 100;
         int findValue3 = 28;
-        cout << "Using linear search to look for values " << findValue1 << ", " << findValue2 << ", " << findValue3 << " in matrix." << endl;
+        int findValue4 = 62;
+        cout << "Using linear search to look for values " << findValue1 << ", " << findValue2 << ", " << findValue3 << ", " << findValue4 << " in matrix." << endl;
         if (matrix.findValue(findValue1)) {
             cout << "Found: " << findValue1 << endl;
         } else {
@@ -639,6 +640,11 @@ int main(int argc, char *argv[]) {
             cout << "Found " << findValue3 << endl;
         } else {
             cout << "Not found: " << findValue3 << endl;
+        }
+        if (matrix.findValue(findValue4)) {
+            cout << "Found " << findValue4 << endl;
+        } else {
+            cout << "Not found: " << findValue4 << endl;
         }
         cout << endl;
 
@@ -669,7 +675,8 @@ int main(int argc, char *argv[]) {
         findValue1 = -3;
         findValue2 = 2;
         findValue3 = 56;
-        cout << "Using binary search to look for values " << findValue1 << ", " << findValue2 << ", " << findValue3 << " in matrix." << endl;
+        findValue4 = 81;
+        cout << "Using binary search to look for values " << findValue1 << ", " << findValue2 << ", " << findValue3 << ", " << findValue4 << " in matrix." << endl;
         if (matrix.findValue(findValue1)) {
             cout << "Found: " << findValue1 << endl;
         } else {
@@ -684,6 +691,11 @@ int main(int argc, char *argv[]) {
             cout << "Found " << findValue3 << endl;
         } else {
             cout << "Not found: " << findValue3 << endl;
+        }
+        if (matrix.findValue(findValue4)) {
+            cout << "Found " << findValue4 << endl;
+        } else {
+            cout << "Not found: " << findValue4 << endl;
         }
         cout << endl;
 
