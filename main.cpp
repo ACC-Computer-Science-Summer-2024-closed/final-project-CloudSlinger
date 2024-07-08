@@ -22,7 +22,13 @@ int main(int argc, char *argv[]) {
             } else {
                 cout << "Matrix initialized successfully." << endl;
                 matrix.printMatrix();
-                cout << endl;
+                cout << "Sorted: ";
+                if (matrix.getSorted()) {
+                    cout << "true";
+                } else {
+                    cout << "false";
+                }
+                cout << "\n" << endl;
             }
         } catch (int e) {
             cout << "Error: Matrix row/columns must be integers and larger than 2." << endl;
@@ -43,7 +49,13 @@ int main(int argc, char *argv[]) {
             } else {
                 cout << "Matrix initialized successfully." << endl;
                 matrix.printMatrix();
-                cout << endl;
+                cout << "Sorted: ";
+                if (matrix.getSorted()) {
+                    cout << "true";
+                } else {
+                    cout << "false";
+                }
+                cout << "\n" << endl;
             }
         } catch (int e) {
             cout << "Error: Matrix row/columns and initial value must be integers and larger than 2." << endl;
