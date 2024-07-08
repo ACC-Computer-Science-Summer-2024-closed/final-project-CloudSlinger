@@ -355,7 +355,7 @@ bool Matrix::getSorted() {
 }
 
 bool Matrix::validInteger(char* str) {
-    
+
     /*********************************************
      This method checks if the given string represents a valid integer.
 
