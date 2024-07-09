@@ -6,8 +6,8 @@ This C++ program implements an integer matrix class, enabling the dynamic creati
 
 ### Constructors
 
-- **Matrix(int, int)**: Constructs a matrix with specified dimensions. Throws an exception if rows or columns are less than or equal to 2.
-- **Matrix(int, int, int)**: Overloaded constructor that initializes the matrix with specified dimensions and an initial value for all elements. Throws an exception if rows or columns are less than or equal to 2.
+- **Matrix(int, int)**: Constructs a matrix with specified dimensions. Throws an exception if rows or columns are less than 2.
+- **Matrix(int, int, int)**: Overloaded constructor that initializes the matrix with specified dimensions and an initial value for all elements. Throws an exception if rows or columns are less than 2.
 
 ### Destructor
 
