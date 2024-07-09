@@ -10,8 +10,8 @@ Matrix::Matrix(int rows, int cols) {
 
     /*********************************************
     Constructor to initialize the Matrix with given
-    rows and columns, and an optional initialization value.
-    Throws an exception if rows or columns are less than or equal 2.
+    rows and columns. Throws an exception if rows or
+    columns are less than the defined minimum values.
 
     @param rows : the number of rows in the matrix
     @param cols : the number of columns in the matrix
@@ -31,9 +31,10 @@ Matrix::Matrix(int rows, int cols) {
 Matrix::Matrix(int rows, int cols, int initValue) {
 
     /*********************************************
-    Overloaded constructor to initialize the Matrix with given
-    rows and columns, and an optional initialization value.
-    Throws an exception if rows or columns are less than or equal 2.
+    Overloaded constructor to initialize the Matrix with specified
+    rows and columns, and an initial value for all elements.
+    Throws an exception if rows or columns are less than the minimum
+    values defined by ROWS and COLS.
 
     @param rows : the number of rows in the matrix
     @param cols : the number of columns in the matrix
