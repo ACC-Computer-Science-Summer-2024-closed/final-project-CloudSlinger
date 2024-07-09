@@ -28,7 +28,8 @@ class Matrix {
 
     @attrib rows : the number of rows in the matrix
     @attrib cols : the number of columns in the matrix
-    @attrib data : 2D vector to hold the matrix data
+    @attrib data : 2D array to hold the matrix data
+    @attrib sorted : flag indicating if the matrix is sorted
     *********************************************/
 
 public:
