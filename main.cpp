@@ -63,10 +63,10 @@ int main(int argc, char *argv[]) {
         }
 
     } else if (argc == 2) {
-        cout << "Error: Incorrect number of arguments, expecting 2 or 3 and must be integers." << endl;
+        cout << "Error: Incorrect number of arguments. Expecting 2 or 3 arguments, and all must be integers." << endl;
         cout << endl;
     } else if (argc > 4) {
-        cout << "Error: Too many arguments, expecting 2 or 3 and must be integers." << endl;
+        cout << "Error: Too many arguments. Expecting 2 or 3 arguments, all of which must be integers." << endl;
         cout << endl;
     }
 
@@ -74,7 +74,7 @@ int main(int argc, char *argv[]) {
     try {
         Matrix matrix(2, 0);
     } catch (int e) {
-        cout << "Error: Matrix row/columns must be larger than or equal to 2." << endl;
+        cout << "Error: Matrix rows and columns must be larger than or equal to 2." << endl;
         cout << endl;
     }
 
@@ -82,7 +82,7 @@ int main(int argc, char *argv[]) {
     try {
         Matrix matrix(0, 2);
     } catch (int e) {
-        cout << "Error: Matrix row/columns must be larger than or equal to 2." << endl;
+        cout << "Error: Matrix rows and columns must be larger than or equal to 2." << endl;
         cout << endl;
     }
 
@@ -90,7 +90,7 @@ int main(int argc, char *argv[]) {
     try {
         Matrix matrix(3, -1);
     } catch (int e) {
-        cout << "Error: Matrix row/columns must be larger than or equal to 2." << endl;
+        cout << "Error: Matrix rows and columns must be larger than or equal to 2." << endl;
         cout << endl;
     }
 
@@ -98,7 +98,7 @@ int main(int argc, char *argv[]) {
     try {
         Matrix matrix(-1, 3);
     } catch (int e) {
-        cout << "Error: Matrix row/columns must be larger than or equal to 2." << endl;
+        cout << "Error: Matrix rows and columns must be larger than or equal to 2." << endl;
         cout << endl;
     }
 
@@ -115,7 +115,7 @@ int main(int argc, char *argv[]) {
         }
         cout << "\n" << endl;
     } catch (int e) {
-        cout << "Error: Matrix row/columns must be larger than or equal to 2." << endl;
+        cout << "Error: Matrix rows and columns must be larger than or equal to 2." << endl;
         cout << endl;
     }
 
@@ -132,7 +132,7 @@ int main(int argc, char *argv[]) {
         }
         cout << "\n" << endl;
     } catch (int e) {
-        cout << "Error: Matrix row/columns must be larger than or equal to 2." << endl;
+        cout << "Error: Matrix rows and columns must be larger than or equal to 2." << endl;
         cout << endl;
     }
 
@@ -149,7 +149,7 @@ int main(int argc, char *argv[]) {
         }
         cout << "\n" << endl;
     } catch (int e) {
-        cout << "Error: Matrix row/columns must be larger than or equal to 2." << endl;
+        cout << "Error: Matrix rows and columns must be larger than or equal to 2." << endl;
         cout << endl;
     }
 
@@ -183,7 +183,7 @@ int main(int argc, char *argv[]) {
         }
         cout << "\n" << endl;
     } catch (int e) {
-        cout << "Error: Matrix row/columns must be larger than or equal to 2." << endl;
+        cout << "Error: Matrix rows and columns must be larger than or equal to 2." << endl;
     }
 
     cout << "Attempting to create and initialize a new matrix(8, 5) without a default value." << endl;
@@ -199,7 +199,7 @@ int main(int argc, char *argv[]) {
         }
         cout << "\n" << endl;
     } catch (int e) {
-        cout << "Error: Matrix row/columns must be larger than or equal to 2." << endl;
+        cout << "Error: Matrix rows and columns must be larger than or equal to 2." << endl;
     }
 
     cout << "Attempting to create and initialize a new matrix(6, 10) without a default value." << endl;
@@ -422,7 +422,7 @@ int main(int argc, char *argv[]) {
         cout << endl;
 
     } catch (int e) {
-        cout << "Error: Matrix row/columns must be larger than or equal to 2." << endl;
+        cout << "Error: Matrix rows and columns must be larger than or equal to 2." << endl;
         cout << endl;
     }
 
@@ -447,7 +447,7 @@ int main(int argc, char *argv[]) {
     try {
         Matrix matrix(3, -1, 0);
     } catch (int e) {
-        cout << "Error: Matrix row/columns must be larger than or equal to 2." << endl;
+        cout << "Error: Matrix rows and columns must be larger than or equal to 2." << endl;
         cout << endl;
     }
 
@@ -455,7 +455,7 @@ int main(int argc, char *argv[]) {
     try {
         Matrix matrix(-1, 3, 0);
     } catch (int e) {
-        cout << "Error: Matrix row/columns must be larger than or equal to 2." << endl;
+        cout << "Error: Matrix rows and columns must be larger than or equal to 2." << endl;
         cout << endl;
     }
 
@@ -472,7 +472,7 @@ int main(int argc, char *argv[]) {
         }
         cout << "\n" << endl;
     } catch (int e) {
-        cout << "Error: Matrix row/columns must be larger than or equal to 2." << endl;
+        cout << "Error: Matrix rows and columns must be larger than or equal to 2." << endl;
         cout << endl;
     }
 
@@ -489,7 +489,7 @@ int main(int argc, char *argv[]) {
         }
         cout << "\n" << endl;
     } catch (int e) {
-        cout << "Error: Matrix row/columns must be larger than or equal to 2." << endl;
+        cout << "Error: Matrix rows and columns must be larger than or equal to 2." << endl;
         cout << endl;
     }
 
@@ -506,7 +506,7 @@ int main(int argc, char *argv[]) {
         }
         cout << "\n" << endl;
     } catch (int e) {
-        cout << "Error: Matrix row/columns must be larger than or equal to 2." << endl;
+        cout << "Error: Matrix rows and columns must be larger than or equal to 2." << endl;
         cout << endl;
     }
 
@@ -523,7 +523,7 @@ int main(int argc, char *argv[]) {
         }
         cout << "\n" << endl;
     } catch (int e) {
-        cout << "Error: Matrix row/columns must be larger than or equal to 2." << endl;
+        cout << "Error: Matrix rows and columns must be larger than or equal to 2." << endl;
         cout << endl;
     }
 
@@ -785,7 +785,7 @@ int main(int argc, char *argv[]) {
         }
 
     } catch (int e) {
-        cout << "Error: Matrix row/columns must be larger than or equal to 2." << endl;
+        cout << "Error: Matrix rows and columns must be larger than or equal to 2." << endl;
         cout << endl;
     }
 
