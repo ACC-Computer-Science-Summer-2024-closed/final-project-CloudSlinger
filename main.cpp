@@ -367,6 +367,34 @@ int main(int argc, char *argv[]) {
         }
         cout << endl;
 
+        cout << "Rotate Matrix so rows become columns and columns become rows." << endl;
+        matrix.rotateMatrix();
+        matrix.printMatrix();
+        cout << "Sorted: ";
+        if (matrix.getSorted()) {
+            cout << "true";
+        } else {
+            cout << "false";
+        }
+        cout << "\n" << endl;
+
+        matrix.sortMatrix();
+
+        cout << "Matrix after sorting each row, sorted is true." << endl;
+        matrix.printMatrix();
+        cout << "Sorted: ";
+        if (matrix.getSorted()) {
+            cout << "true";
+        } else {
+            cout << "false";
+        }
+        cout << "\n" << endl;
+
+        for (int i = 0; i < 6; ++i) {
+            cout << "Row " << i << " sum: " << matrix.rowSum(i) << ", Average: " << matrix.rowAverage(i) << endl;
+        }
+        cout << endl;
+
     } catch (int e) {
         cout << "Error: Matrix row/columns must be larger than 2." << endl;
         cout << endl;
