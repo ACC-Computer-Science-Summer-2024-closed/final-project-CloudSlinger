@@ -58,7 +58,7 @@ int main(int argc, char *argv[]) {
                 cout << "\n" << endl;
             }
         } catch (int e) {
-            cout << "Error: Matrix row/columns and initial value must be integers and larger than 2." << endl;
+            cout << "Error: Matrix rows and columns must be integers and larger than 2. The initial value must also be an integer." << endl;
             cout << endl;
         }
 
