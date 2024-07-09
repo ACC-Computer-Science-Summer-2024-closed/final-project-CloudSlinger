@@ -21,7 +21,7 @@ Matrix::Matrix(int rows, int cols) {
     @exception int : throws an integer exception if rows or columns <= 2
     *********************************************/
 
-    if (rows <= ROWS || cols <= COLS) {
+    if (rows < ROWS || cols < COLS) {
         throw 0;
     }
 
@@ -44,7 +44,7 @@ Matrix::Matrix(int rows, int cols, int initValue) {
     @exception int : throws an integer exception if rows or columns <= 2
     *********************************************/
 
-    if (rows <= ROWS || cols <= COLS) {
+    if (rows < ROWS || cols < COLS) {
         throw 0;
     }
 
