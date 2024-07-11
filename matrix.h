@@ -71,6 +71,11 @@ private:
     int **data;
     bool sorted;
 
+    /**********************
+    Helper Functions
+    ***********************/
+    bool binarySearch(int[], int, int, int);
+
 };
 
 #endif //MATRIX_H
