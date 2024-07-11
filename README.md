@@ -45,5 +45,9 @@ Note: Command line arguments are optional. If not provided, the program initiali
 ### Searching
 
 - **findValue(int)**: Searches for a given value in the matrix. Utilizes binary search if the matrix is sorted; otherwise, performs a linear search.
+- **binarySearch(int[], int, int, int)**: Performs binary search on a sorted array to find a given value.
 
+### Swapping
+
+- **swap(int*, int*)**: Swaps the values at two integer pointers.
 
