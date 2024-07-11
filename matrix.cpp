@@ -173,15 +173,32 @@ void Matrix::sortMatrix() {
         for (int j = 0; j < cols - 1; ++j) {
             for (int k = 0; k < cols - j - 1; ++k) {
                 if (data[i][k] > data[i][k + 1]) {
-                    int temp = data[i][k];
-                    data[i][k] = data[i][k + 1];
-                    data[i][k + 1] = temp;
+                    swap(&data[i][k], &data[i][k + 1]);
                 }
             }
         }
     }
 
     sorted = true;
+}
+
+void Matrix::swap(int* n1, int* n2) {
+    /*********************************************
+    This private method accepts two integer pointers
+    and swaps the values at those addresses.
+
+    @param n1 : pointer to the first integer
+    @param n2 : pointer to the second integer
+
+    @return void : does not return a value
+
+    @exception na : na
+
+    @note : the de-reference of a pointer is the value pointed to
+    *********************************************/
+    int temp = *n1;
+    *n1 = *n2;
+    *n2 = temp;
 }
 
 int Matrix::min() {
