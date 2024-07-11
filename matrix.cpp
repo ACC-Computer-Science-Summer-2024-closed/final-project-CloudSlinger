@@ -169,7 +169,7 @@ void Matrix::sortMatrix() {
 
     @exception na : na
     *********************************************/
-    
+
     for (int i = 0; i < rows; ++i) {
         for (int j = 0; j < cols - 1; ++j) {
             for (int k = 0; k < cols - j - 1; ++k) {
@@ -416,7 +416,7 @@ bool Matrix::getSorted() {
 bool Matrix::validInteger(char* str) {
 
     /*********************************************
-     This method checks if the given string represents a valid integer.
+    This method checks if the given string represents a valid integer.
 
     @param str : the string to be processed
 
