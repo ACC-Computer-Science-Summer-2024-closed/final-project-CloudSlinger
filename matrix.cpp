@@ -169,6 +169,7 @@ void Matrix::sortMatrix() {
 
     @exception na : na
     *********************************************/
+    
     for (int i = 0; i < rows; ++i) {
         for (int j = 0; j < cols - 1; ++j) {
             for (int k = 0; k < cols - j - 1; ++k) {
@@ -197,7 +198,7 @@ void Matrix::swap(int* n1, int* n2) {
 
     @note : the de-reference of a pointer is the value pointed to
     *********************************************/
-    
+
     int temp = *n1;
     *n1 = *n2;
     *n2 = temp;
