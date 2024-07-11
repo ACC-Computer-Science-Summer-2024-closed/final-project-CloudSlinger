@@ -183,6 +183,7 @@ void Matrix::sortMatrix() {
 }
 
 void Matrix::swap(int* n1, int* n2) {
+
     /*********************************************
     This private method accepts two integer pointers
     and swaps the values at those addresses.
@@ -196,6 +197,7 @@ void Matrix::swap(int* n1, int* n2) {
 
     @note : the de-reference of a pointer is the value pointed to
     *********************************************/
+    
     int temp = *n1;
     *n1 = *n2;
     *n2 = temp;
