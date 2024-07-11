@@ -9,7 +9,6 @@ This file is included by matrix.cpp for the implementation of the Matrix class m
 #define MATRIX_H
 
 #include <iostream>     /* cout, endl */
-#include <algorithm>    /* binary_search */
 #include <string.h>     /* strlen */
 #include <cstdlib>      /* atoi */
 
