@@ -163,14 +163,22 @@ float Matrix::rowAverage(int row)  {
 void Matrix::sortMatrix() {
 
     /*********************************************
-    This method sorts each row of the matrix.
+    This method sorts each row of the matrix using bubble sort.
 
     @return void : does not return a value
 
     @exception na : na
     *********************************************/
     for (int i = 0; i < rows; ++i) {
-        std::sort(data[i], data[i] + cols);
+        for (int j = 0; j < cols - 1; ++j) {
+            for (int k = 0; k < cols - j - 1; ++k) {
+                if (data[i][k] > data[i][k + 1]) {
+                    int temp = data[i][k];
+                    data[i][k] = data[i][k + 1];
+                    data[i][k + 1] = temp;
+                }
+            }
+        }
     }
 
     sorted = true;
