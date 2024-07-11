@@ -27,7 +27,7 @@ This C++ program implements an integer matrix class, enabling the dynamic creati
 - **getSorted()**: Returns whether the matrix is sorted.
 - **sortMatrix()**: Sorts the values of the matrix on a per-row basis.
 - **findValue(int)**: Searches for a given value in the matrix.
-- **binarySearch(int[], int, int, int)**: int, int, int): Performs binary search on a sorted array to find a given value.
+- **binarySearch(int[], int, int, int)**: Performs binary search on a sorted array to find a given value.
 - **swap(int, int)**: Swaps the values at two integer pointers.
 
 ### Command Line Arguments
