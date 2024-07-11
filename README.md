@@ -27,6 +27,8 @@ This C++ program implements an integer matrix class, enabling the dynamic creati
 - **getSorted()**: Returns whether the matrix is sorted.
 - **sortMatrix()**: Sorts the values of the matrix on a per-row basis.
 - **findValue(int)**: Searches for a given value in the matrix.
+- **binarySearch(int[], int, int, int): Performs binary search on a sorted array to find a given value.
+- **swap(int, int)**: Swaps the values at two integer pointers.
 
 ### Command Line Arguments
 
@@ -37,17 +39,4 @@ This program supports command line arguments for matrix initialization:
 - **Three arguments**: With three arguments, the first argument specifies the number of rows, the second argument specifies the number of columns, and the third argument specifies the initial value for all matrix elements.
 
 Note: Command line arguments are optional. If not provided, the program initializes a default matrix.
-
-### Sorting
-
-- **sortMatrix()**: Sorts each row of the matrix.
-
-### Searching
-
-- **findValue(int)**: Searches for a given value in the matrix. Utilizes binary search if the matrix is sorted; otherwise, performs a linear search.
-- **binarySearch(int[], int, int, int)**: Performs binary search on a sorted array to find a given value.
-
-### Swapping
-
-- **swap(int*, int*)**: Swaps the values at two integer pointers.
 
