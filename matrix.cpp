@@ -269,23 +269,53 @@ bool Matrix::findValue(int value)  {
     @exception na : na
     *********************************************/
 
-    bool valueFound = false;
+    bool found = false;
 
-    for (int i = 0; i < rows; ++i) {
+    for (int i = 0; i < rows && !found; ++i) {
         if (sorted) {
-            if (std::binary_search(data[i], data[i] + cols, value)) {
-                valueFound = true;
-            }
+            found = binarySearch(data[i], 0, cols - 1, value);
         } else {
             for (int j = 0; j < cols; ++j) {
                 if (data[i][j] == value) {
-                    valueFound = true;
+                    found = true;
                 }
             }
         }
     }
 
-    return valueFound;
+    return found;
+}
+
+bool Matrix::binarySearch(int arr[], int low, int high, int key) {
+
+    /*********************************************
+    This method performs a binary search on a sorted array to find a given value.
+
+    @param arr : the array to search in
+    @param low : the starting index
+    @param high : the ending index
+    @param key : the value to search for in the array
+
+    @return bool : true if the value is found, otherwise false
+
+    @exception na : na
+    *********************************************/
+
+    bool found = false;
+
+    if (high >= low) {
+        int mid = low + (high - low) / 2;
+
+        if (arr[mid] == key) {
+            found = true;
+        } else if (arr[mid] > key) {
+            found = binarySearch(arr, low, mid - 1, key);
+        } else {
+            found = binarySearch(arr, mid + 1, high, key);
+        }
+    }
+
+    return found;
 }
 
 void Matrix::setElement(int row, int col, int value) {
