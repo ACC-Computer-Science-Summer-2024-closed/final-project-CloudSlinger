@@ -71,6 +71,11 @@ private:
     bool sorted;
 
     /**********************
+    Private Methods
+    ***********************/
+    void swap(int*, int*);
+
+    /**********************
     Helper Functions
     ***********************/
     bool binarySearch(int[], int, int, int);
